@@ -1,0 +1,125 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
+import Logo from "@/components/partials/Logo/Logo";
+import Link from "next/link";
+import { Button } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+import { navLinks } from "@/constant/Navlink";
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
+
+  return (
+    <nav className="bg-tertiary">
+      <div className="container p-4 md:p-8">
+        {/* Desktop view */}
+        <div className="hidden lg:block">
+          <ul className="flex items-center gap-10 justify-center">
+            <Link href={"/"}>
+              <Logo />
+            </Link>
+
+            {navLinks.map((nav) => (
+              <li
+                key={`nav:${nav.name}`}
+                className={`hover-border-bottom font-medium text-black/70 hover:text-primary ${
+                  pathname == nav.path ? "border-b-2 border-primary" : ""
+                }`}
+              >
+                <Link
+                  href={nav.path}
+                  className={`${pathname == nav.path ? "text-primary" : ""}`}
+                >
+                  {nav.name}
+                </Link>
+              </li>
+            ))}
+            <Button
+              id="book-call-1"
+              color="primary"
+              size="md"
+              as={Link}
+              target="_blank"
+              href="#"
+            >
+              Chat Us Now
+            </Button>
+          </ul>
+        </div>
+        {/*End of desktop view */}
+
+        {/* mobiel view */}
+        <div className="lg:hidden">
+          <div className="flex items-center justify-between z-50">
+            <Link href={"/"}>
+              <Logo className="w-28 z-50" />
+            </Link>
+            <div onClick={() => setIsMenuOpen(!isMenuOpen)} className="z-50">
+              {isMenuOpen ? (
+                <AiOutlineClose className="w-8 h-8 text-white" />
+              ) : (
+                <BiMenuAltRight className="w-8 h-8 text-primary" />
+              )}
+            </div>
+          </div>
+          <div
+            className={`fixed z-40 left-0 top-0 bg-secondary p-4 h-screen w-full transition duration-300  active:duration-500 flex items-center justify-center text-center ${
+              isMenuOpen ? "-translate-x-0" : "-translate-x-full"
+            }`}
+          >
+            <ul className="space-y-6 w-full">
+              {navLinks.map((nav) => (
+                <li
+                  key={`nav-${nav.name}`}
+                  className={`w-max mx-auto text-white ${
+                    pathname == nav.path
+                      ? "text-white font-semibold border-b-2 border-white"
+                      : ""
+                  }`}
+                >
+                  <Link
+                    href={nav.path}
+                    className="text-2xl w-full"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {nav.name}
+                  </Link>
+                </li>
+              ))}{" "}
+              <Button
+                id="book-call-2"
+                color="primary"
+                size="lg"
+                as={Link}
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=6584997272&text=Hi,%20I%20would%20like%20to%20make%20a%20reservation.%20Name%20:%20Email%20:%20Date%20:%20Time%20:"
+              >
+                Book Now
+              </Button>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

@@ -34,7 +34,7 @@ export default function WhyChoose() {
             </div>
           </div>
 
-          <div className="flex flex-col-reverse md:flex-row gap-4 items-centerr">
+          <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
             <div className="md:w-1/2">
               <Image src={image2.src} alt="Expert Guidance" radius="none" />
             </div>
@@ -53,7 +53,7 @@ export default function WhyChoose() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 items-centerr">
+          <div className="flex flex-col md:flex-row gap-4 items-center">
             <div className="md:w-1/2 space-y-3">
               <h3 className="font-bold">Customer Satisfaction Service</h3>
               <p className="text-gray-400 max-w-md text-justify lg:text-lg">

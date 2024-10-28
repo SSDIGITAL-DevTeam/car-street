@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import NextTopLoader from "nextjs-toploader";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
+import Whatsapp from "@/components/layouts/Whatsapp";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Providers>
           <NextTopLoader color="#00ADEF" />
           <Navbar />
+          <Whatsapp />
           {children}
           <Footer />
         </Providers>

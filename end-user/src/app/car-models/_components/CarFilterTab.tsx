@@ -1,34 +1,53 @@
 "use client";
 
 import React, { JSX } from "react";
-import { Tabs, Tab } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
+import { filterTabs } from "@/constant/FilterTab";
 
 export default function CarFilterTab(): JSX.Element {
+  // search params
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams!.toString());
+
+  const tab = searchParams.get("tab");
+
   return (
-    <Tabs
-      className="mt-2"
-      classNames={{
-        panel: "px-0",
-        cursor: `rounded`,
-        base: "sticky top-2 z-10",
-      }}
-      color="primary"
-      aria-label="Options"
-      fullWidth
-    >
-      <Tab key="all-cars" title="All Cars">
-        <div className="mt-4 flex flex-col gap-6 lg:mt-6">All Car</div>
-      </Tab>
+    <div>
+      <div className="flex gap-2 md:gap-4 lg:gap-8">
+        {filterTabs.map((filterTab) => (
+          <Button
+            key={filterTab.key}
+            className={` border-primary font-semibold ${
+              tab === filterTab.key
+                ? "bg-primary text-white"
+                : "bg-white text-primary "
+            }`}
+            variant="bordered"
+            radius="full"
+            onClick={() => {
+              params.set("tab", filterTab.key);
 
-      <Tab key="by-categories" title="Filter By Categories">
-        <div className="mt-4 flex flex-col gap-6 lg:mt-6">
-          Filter By Categories
-        </div>
-      </Tab>
+              window.history.pushState({}, "", `?${params.toString()}`);
+            }}
+          >
+            {filterTab.title}
+          </Button>
+        ))}
+      </div>
 
-      <Tab key="by-brands" title="Filter By Brands">
-        <div className="mt-4 flex flex-col gap-6 lg:mt-6">Filter By Brands</div>
-      </Tab>
-    </Tabs>
+      <Button
+        variant="solid"
+        color="primary"
+        radius="full"
+        onClick={() => {
+          params.set("category", "mpv");
+
+          window.history.pushState({}, "", `?${params.toString()}`);
+        }}
+      >
+        MPV
+      </Button>
+    </div>
   );
 }

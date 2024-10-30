@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -6,6 +7,7 @@ import NextTopLoader from "nextjs-toploader";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Whatsapp from "@/components/layouts/Whatsapp";
+import Loading from "@/components/partials/Loading";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -26,13 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} antialiased`}>
-        <Providers>
-          <NextTopLoader color="#00ADEF" />
-          <Navbar />
-          <Whatsapp />
-          {children}
-          <Footer />
-        </Providers>
+        <Suspense fallback={<Loading isFullScreen />}>
+          <Providers>
+            <NextTopLoader color="#00ADEF" />
+            <Navbar />
+            <Whatsapp />
+            {children}
+            <Footer />
+          </Providers>
+        </Suspense>
       </body>
     </html>
   );

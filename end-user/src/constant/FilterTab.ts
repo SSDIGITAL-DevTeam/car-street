@@ -16,3 +16,26 @@ export const filterTabs: FilterTab[] = [
     key: "brands",
   },
 ];
+
+export const categories: FilterTab[] = [
+  {
+    title: "Minivan",
+    key: "Minivan",
+  },
+  {
+    title: "MPV",
+    key: "MPV",
+  },
+  {
+    title: "SUV",
+    key: "SUV",
+  },
+  {
+    title: "Subcompact",
+    key: "Subcompact",
+  },
+  {
+    title: "Hybrid",
+    key: "Hybrid",
+  },
+];

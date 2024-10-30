@@ -4,7 +4,7 @@ type Navlink = {
 };
 export const navLinks: Navlink[] = [
   { name: "Home", path: "/" },
-  { name: "Car Models", path: "/car-models" },
+  { name: "Car Models", path: "/car-models?tab=all" },
   { name: "About Us", path: "/about-us" },
   { name: "Contact Us", path: "/contact-us" },
 ];

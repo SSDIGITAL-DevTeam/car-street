@@ -3,11 +3,35 @@ import React from "react";
 import { Image } from "@nextui-org/react";
 import ourCarImg from "@/assets/images/our-cars-image.webp";
 import CarFilterTab from "./CarFilterTab";
-import Card from "@/components/partials/Logo/Card";
-import { allCars } from "@/constant/Cars";
-import { Car } from "@/@types/Car";
+import { useSearchParams } from "next/navigation";
+import AllCarsTab from "./AllCarsTab";
+
+import CategoryCarsTab from "./CategoryCarsTab";
+import BrandCarsTab from "./BrandCarsTab";
 
 export default function OurCars() {
+  const searchParams = useSearchParams();
+
+  const tab = searchParams.get("tab");
+  const categoryParams = searchParams.get("category");
+  const brandParams = searchParams.get("brand");
+
+  const showFilteredTab = (type: string) => {
+    switch (true) {
+      case type == "all":
+        return <AllCarsTab />;
+
+      case type == "categories":
+        return <CategoryCarsTab params={categoryParams!} />;
+
+      case type == "brands":
+        return <BrandCarsTab params={brandParams!} />;
+
+      default:
+        return <AllCarsTab />;
+    }
+  };
+
   return (
     <div className="relative py-8 md:py-16 lg:py-24">
       <div className="container p-4 md:p-8">
@@ -31,11 +55,7 @@ export default function OurCars() {
           <CarFilterTab />
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
-          {allCars.map((car: Car, index: number) => (
-            <Card car={car} key={index} />
-          ))}
-        </div>
+        <div>{showFilteredTab(tab!)}</div>
       </div>
     </div>
   );

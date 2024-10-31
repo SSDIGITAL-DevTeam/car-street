@@ -55,7 +55,8 @@ export default function OurCars() {
           <CarFilterTab />
         </div>
 
-        <div>{showFilteredTab(tab!)}</div>
+        {/* tabs condition */}
+        {showFilteredTab(tab!)}
       </div>
     </div>
   );

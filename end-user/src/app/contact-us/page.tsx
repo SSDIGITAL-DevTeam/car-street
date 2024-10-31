@@ -71,8 +71,8 @@ export default function Contact() {
 
             <div className="lg:w-3/5 w-full">
               <div className="bg-white border-2 rounded-lg p-4 md:p-8">
-                <form action="">
-                  <div className="space-y-4 ">
+                <form action="" className="">
+                  <div className="space-y-4">
                     <div className="flex flex-col lg:flex-row justify-between gap-4">
                       <Input
                         size="sm"
@@ -143,7 +143,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-8 md:p-16 lg:py-24">
+      <section className=" ">
         <div className="continer p-4 md:p-8">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8138091668216!2d103.8053862739633!3d1.2857234617807194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1bcdc794f497%3A0x71a1203a5f12b260!2s2%20Jln%20Kilang%20Barat%2C%20%2303-01%2C%20Singapura%20159346!5e0!3m2!1sen!2sen!4v1730108722468!5m2!1sen!2sen"

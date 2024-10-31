@@ -39,3 +39,22 @@ export const categories: FilterTab[] = [
     key: "Hybrid",
   },
 ];
+
+export const brands: FilterTab[] = [
+  {
+    title: "Toyota",
+    key: "Toyota",
+  },
+  {
+    title: "Honda",
+    key: "Honda",
+  },
+  {
+    title: "Suzuki",
+    key: "Suzuki",
+  },
+  {
+    title: "Marcedes-Benz",
+    key: "Marcedes-Benz",
+  },
+];

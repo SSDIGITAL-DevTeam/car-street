@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import { Image } from "@nextui-org/react";
 import { ourCars } from "@/constant/home";
+
+import { motion } from "framer-motion";
 
 export default function Discover() {
   return (
@@ -10,7 +14,13 @@ export default function Discover() {
           <span className="text-primary">Discover</span> Our Cars
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="grid lg:grid-cols-3 gap-8"
+        >
           {ourCars.map((car, index: number) => (
             <div key={index} className="flex flex-col gap-4 items-center">
               <Image
@@ -23,7 +33,7 @@ export default function Discover() {
               </h4>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

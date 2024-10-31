@@ -28,11 +28,11 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-tertiary">
+    <nav className="bg-white border-b-2 z-20">
       <div className="container p-4 md:p-8">
         {/* Desktop view */}
         <div className="hidden lg:block">
-          <ul className="flex items-center gap-10 justify-center">
+          <ul className="flex items-center justify-between">
             <Link href={"/"}>
               <Logo />
             </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={`nav:${nav.name}`}
-                className={`hover-border-bottom font-medium text-black/70 hover:text-primary ${
+                className={`text-xl hover-border-bottom font-medium text-black/70 hover:text-primary ${
                   pathname == nav.path ? "border-b-2 border-primary" : ""
                 }`}
               >
@@ -55,12 +55,13 @@ const Navbar = () => {
             <Button
               id="book-call-1"
               color="primary"
-              size="md"
+              size="lg"
               as={Link}
               target="_blank"
               href="#"
+              radius="full"
             >
-              Chat Us Now
+              Chat With Us
             </Button>
           </ul>
         </div>

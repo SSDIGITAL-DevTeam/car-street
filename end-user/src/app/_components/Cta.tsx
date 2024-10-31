@@ -8,7 +8,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Cta() {
   return (
-    <div className="py-16 md:pt-24 md:mb-40 lg:mb-60 relative">
+    <div className="py-16 md:pt-24 md:mb-40 lg:mb-60 relative overflow-x-hidden">
       <div className="container p-4 md:p-8">
         <div className="absolute left-0 top-20 w-1/2 lg:w-full items-center hidden md:flex">
           <Image src={car.src} alt="Car" />

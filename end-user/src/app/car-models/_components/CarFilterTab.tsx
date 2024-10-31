@@ -1,32 +1,40 @@
 "use client";
 
 import React, { JSX } from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation";
-import { categories } from "@/constant/FilterTab";
-import { FaChevronDown } from "react-icons/fa6";
-import { MdFilterAlt } from "react-icons/md";
+import FilterIcon from "@/assets/svg/filter.svg";
+import SelectCategory from "./SelectCategory";
+import SelectBrand from "./SelectBrand";
+import SelectAllCars from "./SelectAllCars";
+
 export default function CarAllTab(): JSX.Element {
   // search params
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams!.toString());
   const tab = searchParams.get("tab");
 
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedCategory = e.target.value;
+  const showFilteredCars = (type: string) => {
+    switch (true) {
+      case type == "all":
+        return <SelectAllCars />;
 
-    // Set the new "category" param
-    params.set("category", selectedCategory);
-    window.history.pushState({}, "", `?${params.toString()}`);
-    // Push the updated URL
-    // router.push(`?${params.toString()}`);
+      case type == "categories":
+        return <SelectCategory />;
+
+      case type == "brands":
+        return <SelectBrand />;
+
+      default:
+        return <SelectAllCars />;
+    }
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between">
+    <div className="flex flex-col gap-y-8 md:gap-x-8 md:flex-row justify-between md:items-center">
       <div className="flex gap-2 md:gap-4 lg:gap-8">
         <Button
-          className={` border-primary font-semibold ${
+          className={` border-primary font-semibold text-xs md:text-base ${
             tab === "all" ? "bg-primary text-white" : "bg-white text-primary "
           }`}
           variant="bordered"
@@ -46,7 +54,7 @@ export default function CarAllTab(): JSX.Element {
         </Button>
 
         <Button
-          className={` border-primary font-semibold ${
+          className={` border-primary font-semibold text-xs md:text-base ${
             tab === "categories"
               ? "bg-primary text-white"
               : "bg-white text-primary "
@@ -67,7 +75,7 @@ export default function CarAllTab(): JSX.Element {
         </Button>
 
         <Button
-          className={` border-primary font-semibold ${
+          className={` border-primary font-semibold text-xs md:text-base ${
             tab === "brands"
               ? "bg-primary text-white"
               : "bg-white text-primary "
@@ -88,29 +96,19 @@ export default function CarAllTab(): JSX.Element {
         </Button>
       </div>
 
-      <div className="max-w-md w-full flex items-center gap-4">
-        <div className="relative inline-block w-full">
-          <select
-            onChange={handleCategoryChange}
-            className="bg-gray-200 py-2 pl-4 pr-20 text-black/85 appearance-none w-full"
-          >
-            <option value="">Select a category</option>
-            {categories.map((category) => (
-              <option value={category.key} key={category.key}>
-                {category.title}
-              </option>
-            ))}
-          </select>
-
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <FaChevronDown />
-          </div>
-        </div>
+      <div className="max-w-md w-full flex items-center justify-end gap-4">
+        {showFilteredCars(tab!)}
 
         <div>
-          <MdFilterAlt className="w-10 h-10" />
+          <Image
+            src={FilterIcon.src}
+            alt="Filter"
+            radius="none"
+            className="w-8 h-8"
+          />
         </div>
       </div>
+      {/* <SelectCategory /> */}
     </div>
   );
 }

@@ -21,13 +21,13 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="font-medium">Opening Hours</h4>
+                <h4 className="font-medium uppercase">Opening Hours</h4>
                 <span className="text-white/50">10 AM to 6:30 PM daily</span>
               </div>
             </div>
 
             <div>
-              <h3 className="uppercase mb-4">Navigation</h3>
+              <h4 className="uppercase mb-4">Navigation</h4>
               <ul className="space-y-4">
                 {navLinks.map((nav, index: number) => (
                   <li key={index} className="text-white/50">
@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="uppercase mb-4">Connect With us</h3>
+              <h4 className="uppercase mb-4">Connect With us</h4>
               <ul className="flex gap-4 md:gap-8 items-center">
                 <li>
                   <FaInstagram className="w-10 h-10" />

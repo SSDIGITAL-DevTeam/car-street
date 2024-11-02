@@ -1,8 +1,9 @@
 import React from "react";
-
+import Link from "next/link";
 import { Image, Button, Chip } from "@nextui-org/react";
 import { Car } from "@/@types/Car";
 import { BsCarFrontFill } from "react-icons/bs";
+
 type Props = {
   car: Car;
 };
@@ -43,7 +44,13 @@ export default function Card({ car }: Props) {
       </div>
 
       <div className="flex justify-between gap-2 md:gap-4">
-        <Button variant="bordered" color="primary" radius="full">
+        <Button
+          variant="bordered"
+          color="primary"
+          radius="full"
+          as={Link}
+          href={`/car-models/${car.slug}`}
+        >
           See Details
         </Button>
 

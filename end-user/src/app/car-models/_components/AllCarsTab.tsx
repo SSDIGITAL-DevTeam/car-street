@@ -1,5 +1,5 @@
 import { Car } from "@/@types/Car";
-import Card from "@/components/partials/Logo/Card";
+import Card from "@/components/partials/Card";
 import { allCars } from "@/constant/Cars";
 import React from "react";
 

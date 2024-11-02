@@ -5,7 +5,6 @@ import ourCarImg from "@/assets/images/our-cars-image.webp";
 import CarFilterTab from "./CarFilterTab";
 import { useSearchParams } from "next/navigation";
 import AllCarsTab from "./AllCarsTab";
-
 import CategoryCarsTab from "./CategoryCarsTab";
 import BrandCarsTab from "./BrandCarsTab";
 

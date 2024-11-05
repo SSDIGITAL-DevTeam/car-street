@@ -54,7 +54,7 @@ export const brands: FilterTab[] = [
     key: "Suzuki",
   },
   {
-    title: "Marcedes-Benz",
-    key: "Marcedes-Benz",
+    title: "Mercedes-Benz",
+    key: "Mercedes-Benz",
   },
 ];

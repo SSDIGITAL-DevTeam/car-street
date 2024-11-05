@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -8,6 +9,11 @@ export default function Whatsapp() {
       <Button
         className="bg-green-600 py-2 px-4 rounded-full"
         startContent={<FaWhatsapp className="text-white w-6 h-6" />}
+        as={Link}
+        href={
+          "https://wa.me/6598785558?text=Hello%20Car%20Street%20Singapore,%20I%20need%20assistance"
+        }
+        target="_blank"
       >
         <div className="flex gap-2 items-center">
           {/* <FaWhatsapp className="text-white w-6 h-6" /> */}

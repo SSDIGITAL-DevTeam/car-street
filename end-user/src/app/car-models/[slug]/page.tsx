@@ -146,7 +146,14 @@ export default function DetailCar(): JSX.Element {
                 {car?.description}
               </p>
 
-              <Button variant="solid" color="primary" radius="full" size="lg">
+              <Button
+                variant="solid"
+                color="primary"
+                radius="full"
+                size="lg"
+                as={Link}
+                href={`/contact-us`}
+              >
                 Enquire Now
               </Button>
             </div>

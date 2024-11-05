@@ -8,10 +8,10 @@ type Props = {
   car: Car;
 };
 
-export default function Card({ car }: Props) {
+export default function ProductCard({ car }: Props) {
   return (
-    <div className="border bg-[#F6F6F6] rounded-xl p-4">
-      <div className="mb-4 relative">
+    <div className="border bg-[#F6F6F6] rounded-xl p-4 h-full">
+      <div className="mb-4 relative flex justify-center  lg:h-40">
         <Image src={car?.cover} alt={car?.name} />
 
         <div className="absolute right-0 top-0 z-10">
@@ -26,7 +26,7 @@ export default function Card({ car }: Props) {
 
       <h4 className="font-bold mb-4">{car?.name}</h4>
 
-      <div className="flex items-center justify-between mb-4 bg-white py-4 px-2">
+      <div className="flex items-center justify-between mb-4 bg-white py-4 px-2 flex-grow">
         <div className="flex flex-col gap-2">
           <span className="text-primary text-sm">Engine</span>
           <span className="font-bold">{car?.engine} cc</span>
@@ -43,7 +43,7 @@ export default function Card({ car }: Props) {
         </div>
       </div>
 
-      <div className="flex justify-between gap-2 md:gap-4">
+      <div className="flex justify-between gap-2 md:gap-4 mt-auto">
         <Button
           variant="bordered"
           color="primary"

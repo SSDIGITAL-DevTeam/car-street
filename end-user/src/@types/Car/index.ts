@@ -14,6 +14,7 @@ export type Car = {
   slug: string;
   name: string;
   category: string;
+  description?: string;
   brand: string;
   engine: number;
   power: number;

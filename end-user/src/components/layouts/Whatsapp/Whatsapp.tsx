@@ -11,7 +11,7 @@ export default function Whatsapp() {
         startContent={<FaWhatsapp className="text-white w-6 h-6" />}
         as={Link}
         href={
-          "https://wa.me/6598785558?text=Hello%20Car%20Street%20Singapore,%20I%20need%20assistance"
+          "https://wa.me/6598785558?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20CarStreet"
         }
         target="_blank"
       >

@@ -428,7 +428,8 @@ export default function DetailCar(): JSX.Element {
 
             <Button
               as={Link}
-              href="#"
+              href="https://maps.app.goo.gl/M18vu4fa44xYGk8N9"
+              target="_blank"
               radius="full"
               color="primary"
               startContent={<FaMapMarkerAlt className="text-white" />}

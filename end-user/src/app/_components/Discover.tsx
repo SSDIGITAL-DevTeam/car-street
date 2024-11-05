@@ -3,8 +3,9 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
 import { ourCars } from "@/constant/home";
-
+import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Discover() {
   return (
@@ -34,6 +35,20 @@ export default function Discover() {
             </div>
           ))}
         </motion.div>
+
+        <div className="mt-8 lg:mt-16 w-max mx-auto">
+          <Button
+            as={Link}
+            href="'/car-models"
+            color="primary"
+            radius="full"
+            // variant="bordered"
+            className="mx-auto"
+            size="lg"
+          >
+            See More
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -105,7 +105,8 @@ export default function About() {
 
           <Button
             as={Link}
-            href="#"
+            href="https://maps.app.goo.gl/M18vu4fa44xYGk8N9"
+            target="_blank"
             radius="full"
             color="primary"
             startContent={<FaMapMarkerAlt className="text-white" />}
@@ -144,7 +145,8 @@ export default function About() {
 
             <Button
               as={Link}
-              href="#"
+              href="https://maps.app.goo.gl/M18vu4fa44xYGk8N9"
+              target="_blank"
               radius="full"
               color="primary"
               size="lg"

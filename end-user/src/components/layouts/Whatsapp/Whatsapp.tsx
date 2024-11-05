@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Whatsapp() {
   return (
-    <div className="fixed bottom-4 md:bottom-6 right-0 z-20 md:right-10">
+    <div className="fixed bottom-4 md:bottom-6 right-4 z-20 md:right-10">
       <Button
         className="bg-green-600 py-2 px-4 rounded-full"
         startContent={<FaWhatsapp className="text-white w-6 h-6" />}

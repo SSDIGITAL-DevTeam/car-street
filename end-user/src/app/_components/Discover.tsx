@@ -39,10 +39,10 @@ export default function Discover() {
         <div className="mt-8 lg:mt-16 w-max mx-auto">
           <Button
             as={Link}
-            href="'/car-models"
+            href="/car-models"
             color="primary"
             radius="full"
-            // variant="bordered"
+            variant="bordered"
             className="mx-auto"
             size="lg"
           >

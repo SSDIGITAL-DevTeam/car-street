@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Image } from "@nextui-org/react";
-import { FaLongArrowAltRight, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import Link from "next/link";
 import hero from "@/assets/images/hero-homepage.webp";
 
@@ -16,7 +16,7 @@ export default function HeaderHero() {
           </h1>
 
           <p className="max-w-lg lg:text-xl md:text-lg text-gray-400 leading-snug capitalize tracking-wide">
-            CarStreet - Your Trusted New Car Dealership in Singapore! Come by
+            CarStreet - your trusted new car dealership in singapore! come by
             For a cup of coffee on us, while our friendly advisors help you
             through your car-buying journey.{" "}
           </p>

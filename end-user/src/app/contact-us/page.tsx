@@ -42,29 +42,41 @@ export default function Contact() {
                 </p>
 
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-start gap-2">
+                  <a
+                    href="https://maps.app.goo.gl/M18vu4fa44xYGk8N9"
+                    target="_blank"
+                    className="flex items-start gap-2"
+                  >
                     <FiMapPin className="text-primary w-6 h-6" />
 
                     <span className="font-bold md:text-lg max-w-xs text-black/85">
                       2 Jln Kilang Barat, #03-01, Singapore 159346
                     </span>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start gap-2">
+                  <a
+                    href="tel:+6598785558"
+                    target="_blank"
+                    className="flex items-start gap-2"
+                  >
                     <MdOutlinePhoneInTalk className="text-primary w-6 h-6" />
 
                     <span className="font-bold md:text-lg max-w-xs text-black/85">
                       +65 98785558
                     </span>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start gap-2">
+                  <a
+                    href="mailto:contact@carstreet.com.sg"
+                    target="_blank"
+                    className="flex items-start gap-2"
+                  >
                     <IoMailOutline className="text-primary w-6 h-6" />
 
                     <span className="font-bold md:text-lg max-w-xs text-black/85">
-                      carstreet@gmail.com
+                      contact@carstreet.com.sg
                     </span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -143,11 +155,13 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63821.021080713064!2d103.7358634!3d1.2857181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b2f3a55c3d7%3A0x72f086c5b20a1bc3!2sCarStreet%20Singapore!5e0!3m2!1sen!2sen!4v1730800234361!5m2!1sen!2sen" width="600" height="450"   allowFullScreen  loading="lazy"  ></iframe> */}
+
       <section className=" ">
-        <div className="continer p-4 md:p-8">
+        <div className="container p-4 md:p-8">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8138091668216!2d103.8053862739633!3d1.2857234617807194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1bcdc794f497%3A0x71a1203a5f12b260!2s2%20Jln%20Kilang%20Barat%2C%20%2303-01%2C%20Singapura%20159346!5e0!3m2!1sen!2sen!4v1730108722468!5m2!1sen!2sen"
-            className="w-full h-96 md:h-[20rem] lg:h-[40rem]"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63821.021080713064!2d103.7358634!3d1.2857181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b2f3a55c3d7%3A0x72f086c5b20a1bc3!2sCarStreet%20Singapore!5e0!3m2!1sen!2sen!4v1730800234361!5m2!1sen!2sen"
+            className="lg:h-[450px] w-full"
             allowFullScreen
             loading="lazy"
           ></iframe>

@@ -24,7 +24,7 @@ export default function HeaderHero() {
           <div className="pt-6">
             <Button
               as={Link}
-              href="#"
+              href="/contact-us"
               radius="full"
               color="primary"
               size="lg"
@@ -35,7 +35,7 @@ export default function HeaderHero() {
           </div>
         </div>
 
-        <div className="space-y-2 mt-8 lg:mt-12">
+        {/* <div className="space-y-2 mt-8 lg:mt-12">
           <div className="flex items-center gap-2">
             <FaInstagram className="text-primary w-8 h-8 " />
             <FaFacebook className="text-primary w-8 h-8 " />
@@ -44,7 +44,7 @@ export default function HeaderHero() {
           <p className="uppercase md:text-lg lg:text-lg font-bold">
             “with flexible financing schemes”
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className="absolute top-0 lg:-top-40 md:-right-28 lg:right-0 overflow-hidden -z-10 hidden md:block">

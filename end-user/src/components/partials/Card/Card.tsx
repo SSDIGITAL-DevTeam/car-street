@@ -54,7 +54,13 @@ export default function ProductCard({ car }: Props) {
           See Details
         </Button>
 
-        <Button variant="solid" color="primary" radius="full">
+        <Button
+          variant="solid"
+          color="primary"
+          radius="full"
+          as={Link}
+          href={`/contact-us`}
+        >
           Enquire Now
         </Button>
       </div>

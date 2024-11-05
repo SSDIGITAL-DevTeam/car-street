@@ -42,7 +42,7 @@ export default function Cta() {
         <div className="flex items-center justify-center mt-8 md:mt-20 lg:mt-40">
           <Button
             as={Link}
-            href="#"
+            href="/contact-us"
             radius="full"
             color="primary"
             size="lg"

@@ -14,7 +14,7 @@ import { SiMercedes, SiHonda, SiToyota, SiSuzuki } from "react-icons/si";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { StringSchema } from "yup";
+ 
 import ModalEnquiry from "@/components/partials/Modal";
 
 export default function DetailCar(): JSX.Element {

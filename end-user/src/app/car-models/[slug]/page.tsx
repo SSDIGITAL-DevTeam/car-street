@@ -14,6 +14,8 @@ import { SiMercedes, SiHonda, SiToyota, SiSuzuki } from "react-icons/si";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { StringSchema } from "yup";
+import ModalEnquiry from "@/components/partials/Modal";
 
 export default function DetailCar(): JSX.Element {
   const { slug } = useParams();
@@ -22,7 +24,8 @@ export default function DetailCar(): JSX.Element {
   const car = allCars.find((car) => car.slug === slug);
   const [interiorSlide, setInteriorSlide] = useState(0);
   const [exteriorSlide, setExteriorSlide] = useState(0);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [enquiryCar, setEnquiryCar] = useState<string>("");
   // const [sliderRef, instanceRef] = useKeenSlider({
   //   initial: 0,
   //   slides: {
@@ -151,8 +154,10 @@ export default function DetailCar(): JSX.Element {
                 color="primary"
                 radius="full"
                 size="lg"
-                as={Link}
-                href={`/contact-us`}
+                onClick={() => {
+                  setIsOpen(true);
+                  setEnquiryCar(car!.name);
+                }}
               >
                 Enquire Now
               </Button>
@@ -447,6 +452,12 @@ export default function DetailCar(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <ModalEnquiry
+        enquiryCar={enquiryCar}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </main>
   );
 }

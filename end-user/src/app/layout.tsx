@@ -8,6 +8,7 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Whatsapp from "@/components/layouts/Whatsapp";
 import Loading from "@/components/partials/Loading";
+import { Toaster } from "sonner";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
             <Whatsapp />
             {children}
             <Footer />
+            <Toaster />
           </Providers>
         </Suspense>
       </body>

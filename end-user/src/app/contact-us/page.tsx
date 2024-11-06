@@ -1,15 +1,53 @@
 "use client";
 
-import React from "react";
-import { Image, Input, Textarea } from "@nextui-org/react";
+import React, { FormEvent, useState } from "react";
+import { Image, Input, Textarea, Button, Spinner } from "@nextui-org/react";
 import hero from "@/assets/images/hero-contact.webp";
 import { FiMapPin } from "react-icons/fi";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { toast } from "sonner";
 
 export default function Contact() {
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const form: HTMLFormElement = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    const formReset = e.target as HTMLFormElement;
+    try {
+      await fetch("/api/form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      toast("Form submitted", {
+        position: "top-center",
+        className: "bg-primary text-white font-bold",
+      });
+      // toast.success("Form submitted", {
+      //   position: "top-center",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      //   transition: Bounce,
+      // });
+      formReset.reset();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div>
       <header>
@@ -83,27 +121,20 @@ export default function Contact() {
 
             <div className="lg:w-3/5 w-full">
               <div className="bg-white border-2 rounded-lg p-4 md:p-8">
-                <form action="" className="">
+                <form id="form-submit" onSubmit={handleFormSubmit}>
                   <div className="space-y-4">
-                    <div className="flex flex-col lg:flex-row justify-between gap-4">
-                      <Input
-                        size="sm"
-                        type="text"
-                        label="First Name"
-                        name="first_name"
-                        radius="sm"
-                        variant="bordered"
-                      />
-                      <Input
-                        size="sm"
-                        label="Last Name"
-                        name="last_name"
-                        radius="sm"
-                        variant="bordered"
-                      />
-                    </div>
+                    <Input
+                      required
+                      size="sm"
+                      type="text"
+                      label="Full Name"
+                      name="full_name"
+                      radius="sm"
+                      variant="bordered"
+                    />
 
                     <Input
+                      required
                       size="sm"
                       type="email"
                       label="Email"
@@ -124,9 +155,6 @@ export default function Contact() {
                         },
                       }}
                       className="rounded-md border border-[#DCDCDC]  w-full"
-                      // inputStyle={{
-                      //   backgroundColor: "transparent",
-                      // }}
                       countrySelectorStyleProps={{
                         className: "bg-transparent border ",
                         buttonStyle: {
@@ -142,20 +170,39 @@ export default function Contact() {
                     />
 
                     <Textarea
+                      required
                       label="Message"
-                      name="email"
+                      name="message"
                       radius="sm"
                       variant="bordered"
                     />
+                    <Button type="submit" color="primary" radius="sm">
+                      {loading ? (
+                        <Spinner size="sm" color="white" />
+                      ) : (
+                        "Send Message"
+                      )}
+                    </Button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63821.021080713064!2d103.7358634!3d1.2857181!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b2f3a55c3d7%3A0x72f086c5b20a1bc3!2sCarStreet%20Singapore!5e0!3m2!1sen!2sen!4v1730800234361!5m2!1sen!2sen" width="600" height="450"   allowFullScreen  loading="lazy"  ></iframe> */}
+        {/* <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        /> */}
+      </section>
 
       <section className=" ">
         <div className="container p-4 md:p-8">

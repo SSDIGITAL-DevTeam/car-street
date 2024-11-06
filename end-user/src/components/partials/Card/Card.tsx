@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Image, Button, Chip } from "@nextui-org/react";
 import { Car } from "@/@types/Car";
 import { BsCarFrontFill } from "react-icons/bs";
+import ModalEnquiry from "../Modal";
 
 type Props = {
   car: Car;
 };
 
 export default function ProductCard({ car }: Props) {
+  const [enquiryCar, setEnquiryCar] = useState<string>("");
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="border bg-[#F6F6F6] rounded-xl p-4 h-full">
       <div className="mb-4 relative flex justify-center  lg:h-40">
@@ -58,12 +62,20 @@ export default function ProductCard({ car }: Props) {
           variant="solid"
           color="primary"
           radius="full"
-          as={Link}
-          href={`/contact-us`}
+          onClick={() => {
+            setIsOpen(true);
+            setEnquiryCar(car.name);
+          }}
         >
           Enquire Now
         </Button>
       </div>
+
+      <ModalEnquiry
+        enquiryCar={enquiryCar}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </div>
   );
 }

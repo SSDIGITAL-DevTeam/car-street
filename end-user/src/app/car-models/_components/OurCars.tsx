@@ -21,10 +21,10 @@ export default function OurCars() {
         return <AllCarsTab />;
 
       case type == "categories":
-        return <CategoryCarsTab params={categoryParams!} />;
+        return <CategoryCarsTab params={categoryParams as string} />;
 
       case type == "brands":
-        return <BrandCarsTab params={brandParams!} />;
+        return <BrandCarsTab params={brandParams as string} />;
 
       default:
         return <AllCarsTab />;
@@ -55,7 +55,7 @@ export default function OurCars() {
         </div>
 
         {/* tabs condition */}
-        {showFilteredTab(tab!)}
+        {showFilteredTab(tab as string)}
       </div>
     </div>
   );

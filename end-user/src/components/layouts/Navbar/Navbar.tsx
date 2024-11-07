@@ -32,38 +32,44 @@ const Navbar = () => {
       <div className="container p-4 md:p-8">
         {/* Desktop view */}
         <div className="hidden lg:block">
-          <ul className="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <Link href={"/"}>
               <Logo />
             </Link>
 
-            {navLinks.map((nav) => (
-              <li
-                key={`nav:${nav.name}`}
-                className={`text-xl hover-border-bottom font-medium text-black/70 hover:text-primary ${
-                  pathname == nav.path ? "border-b-2 border-primary" : ""
-                }`}
+            <div className="flex items-center gap-20">
+              <ul className="flex items-center gap-20">
+                {navLinks.map((nav) => (
+                  <li
+                    key={`nav:${nav.name}`}
+                    className={`hover-border-bottom font-medium text-black/70 hover:text-primary ${
+                      pathname == nav.path ? "border-b-2 border-primary" : ""
+                    }`}
+                  >
+                    <Link
+                      href={nav.path}
+                      className={`${
+                        pathname == nav.path ? "text-primary" : ""
+                      }`}
+                    >
+                      {nav.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Button
+                id="book-call-1"
+                color="primary"
+                size="lg"
+                as={Link}
+                target="_blank"
+                href="https://wa.me/6598785558?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20CarStreet"
+                radius="full"
               >
-                <Link
-                  href={nav.path}
-                  className={`${pathname == nav.path ? "text-primary" : ""}`}
-                >
-                  {nav.name}
-                </Link>
-              </li>
-            ))}
-            <Button
-              id="book-call-1"
-              color="primary"
-              size="lg"
-              as={Link}
-              target="_blank"
-              href="#"
-              radius="full"
-            >
-              Chat With Us
-            </Button>
-          </ul>
+                Chat With Us
+              </Button>
+            </div>
+          </div>
         </div>
         {/*End of desktop view */}
 
@@ -98,7 +104,7 @@ const Navbar = () => {
                 >
                   <Link
                     href={nav.path}
-                    className="text-2xl w-full"
+                    className="text-lg w-full"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {nav.name}
@@ -111,9 +117,9 @@ const Navbar = () => {
                 size="lg"
                 as={Link}
                 target="_blank"
-                href="https://api.whatsapp.com/send?phone=6584997272&text=Hi,%20I%20would%20like%20to%20make%20a%20reservation.%20Name%20:%20Email%20:%20Date%20:%20Time%20:"
+                href="https://wa.me/6598785558?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20CarStreet"
               >
-                Book Now
+                Chat With Us
               </Button>
             </ul>
           </div>

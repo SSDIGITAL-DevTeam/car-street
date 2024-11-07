@@ -71,7 +71,7 @@ export default function About() {
 
                 <Button
                   as={Link}
-                  href="#"
+                  href="/contact-us"
                   radius="full"
                   color="primary"
                   endContent={<FaLongArrowAltRight className="text-white" />}

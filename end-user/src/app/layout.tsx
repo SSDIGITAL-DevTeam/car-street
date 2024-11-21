@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Carstreet is Singapore’s trusted destination for any premium new vehicles. Contact Us Now',
     images: [
       {
-        url: '/carstreet-og.webp',
+        url: 'https://carstreet.com.sg/carstreet-og.webp',
         width: 1200,
         height: 630,
         alt: 'CarStreet - Bring Home Your Dream Car',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'Carstreet is Singapore’s trusted destination for any premium new vehicles. Contact Us Now',
     images: [
       {
-        url: '/carstreet-og.webp',
+        url: 'https://carstreet.com.sg/carstreet-og.webp',
         width: 1200,
         height: 630,
         alt: 'CarStreet - Bring Home Your Dream Car',

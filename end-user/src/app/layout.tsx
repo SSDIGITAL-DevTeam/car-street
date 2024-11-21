@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={`${lato.className} antialiased`}>
         <Suspense fallback={<Loading isFullScreen />}>
           <Providers>
-            <NextTopLoader color="#00ADEF" />
+            <NextTopLoader color="#00ADEF" showSpinner={false} />
             <Navbar />
             <Whatsapp />
             {children}

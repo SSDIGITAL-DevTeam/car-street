@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-b-2 z-20">
-      <div className="container p-4 md:p-8">
+      <div className="container p-4">
         {/* Desktop view */}
         <div className="hidden lg:block">
           <div className="flex items-center justify-between">

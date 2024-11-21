@@ -14,7 +14,7 @@ import { SiMercedes, SiHonda, SiToyota, SiSuzuki } from "react-icons/si";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
- 
+
 import ModalEnquiry from "@/components/partials/Modal";
 
 export default function DetailCar(): JSX.Element {
@@ -286,7 +286,11 @@ export default function DetailCar(): JSX.Element {
               <div ref={interiorSliderRef} className="keen-slider">
                 {car?.interior?.covers.map((cover, index: number) => (
                   <div key={index} className="keen-slider__slide">
-                    <Image src={cover.url} removeWrapper />
+                    <Image
+                      src={cover.url}
+                      removeWrapper
+                      alt={car.name + index}
+                    />
                   </div>
                 ))}
               </div>{" "}
@@ -334,7 +338,11 @@ export default function DetailCar(): JSX.Element {
               <div ref={exteriorSliderRef} className="keen-slider">
                 {car?.exterior?.covers.map((cover, index: number) => (
                   <div key={index} className="keen-slider__slide">
-                    <Image src={cover.url} removeWrapper />
+                    <Image
+                      src={cover.url}
+                      removeWrapper
+                      alt={car.name + index}
+                    />
                   </div>
                 ))}
               </div>{" "}

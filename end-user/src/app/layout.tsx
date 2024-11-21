@@ -1,24 +1,50 @@
-import type { Metadata } from "next";
-import { Suspense } from "react";
-import { Lato } from "next/font/google";
-import "./globals.css";
-import { Providers } from "./providers";
-import NextTopLoader from "nextjs-toploader";
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import Whatsapp from "@/components/layouts/Whatsapp";
-import Loading from "@/components/partials/Loading";
-import { Toaster } from "sonner";
+import type { Metadata } from 'next';
+import { Suspense } from 'react';
+import { Lato } from 'next/font/google';
+import './globals.css';
+import { Providers } from './providers';
+import NextTopLoader from 'nextjs-toploader';
+import Navbar from '@/components/layouts/Navbar';
+import Footer from '@/components/layouts/Footer';
+import Whatsapp from '@/components/layouts/Whatsapp';
+import Loading from '@/components/partials/Loading';
+import { Toaster } from 'sonner';
 
 const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  style: "normal",
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
+  style: 'normal',
 });
 
 export const metadata: Metadata = {
-  title: "Car Street",
-  description: "car street",
+  title: 'CarStreet - Bring Home Your Dream Car',
+  description: 'Carstreet is Singapore’s trusted destination for any premium new vehicles. Contact Us Now',
+  openGraph: {
+    title: 'CarStreet - Bring Home Your Dream Car',
+    description: 'Carstreet is Singapore’s trusted destination for any premium new vehicles. Contact Us Now',
+    images: [
+      {
+        url: '/carstreet-og.webp',
+        width: 1200,
+        height: 630,
+        alt: 'CarStreet - Bring Home Your Dream Car',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CarStreet - Bring Home Your Dream Car',
+    description: 'Carstreet is Singapore’s trusted destination for any premium new vehicles. Contact Us Now',
+    images: [
+      {
+        url: '/carstreet-og.webp',
+        width: 1200,
+        height: 630,
+        alt: 'CarStreet - Bring Home Your Dream Car',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

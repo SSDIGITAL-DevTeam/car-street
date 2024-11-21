@@ -1,31 +1,27 @@
-"use client";
-import React from "react";
-import { Image } from "@nextui-org/react";
-import ourCarImg from "@/assets/images/our-cars-image.webp";
-import CarFilterTab from "./CarFilterTab";
-import { useSearchParams } from "next/navigation";
-import AllCarsTab from "./AllCarsTab";
-import CategoryCarsTab from "./CategoryCarsTab";
-import BrandCarsTab from "./BrandCarsTab";
+'use client';
+import React from 'react';
+import { Image } from '@nextui-org/react';
+import ourCarImg from '@/assets/images/our-cars-image.webp';
+import CarFilterTab from './CarFilterTab';
+import { useSearchParams } from 'next/navigation';
+import AllCarsTab from './AllCarsTab';
+import CategoryCarsTab from './CategoryCarsTab';
+import BrandCarsTab from './BrandCarsTab';
 
 export default function OurCars() {
   const searchParams = useSearchParams();
 
-  const tab = searchParams.get("tab");
-  const categoryParams = searchParams.get("category");
-  const brandParams = searchParams.get("brand");
+  const tab = searchParams.get('tab') || 'all';
+  const categoryParams = searchParams.get('category');
+  const brandParams = searchParams.get('brand');
 
   const showFilteredTab = (type: string) => {
-    switch (true) {
-      case type == "all":
-        return <AllCarsTab />;
-
-      case type == "categories":
+    switch (type) {
+      case 'categories':
         return <CategoryCarsTab params={categoryParams as string} />;
-
-      case type == "brands":
+      case 'brands':
         return <BrandCarsTab params={brandParams as string} />;
-
+      case 'all':
       default:
         return <AllCarsTab />;
     }
@@ -40,12 +36,7 @@ export default function OurCars() {
           </h2>
 
           <div className="absolute right-0 hidden md:block">
-            <Image
-              src={ourCarImg.src}
-              alt="Our car"
-              radius="none"
-              className="w-3/4 ml-auto "
-            />
+            <Image src={ourCarImg.src} alt="Our car" radius="none" className="w-3/4 ml-auto " />
           </div>
         </div>
 
@@ -55,7 +46,7 @@ export default function OurCars() {
         </div>
 
         {/* tabs condition */}
-        {showFilteredTab(tab as string)}
+        {showFilteredTab(tab)}
       </div>
     </div>
   );

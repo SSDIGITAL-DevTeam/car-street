@@ -1,9 +1,9 @@
 import Chart from "@/assets/svg/chart.svg";
 import Money from "@/assets/svg/money.svg";
 import Percent from "@/assets/svg/percent.svg";
-import Car1 from "@/assets/images/discover-cars-1.webp";
-import Car2 from "@/assets/images/discover-cars-2.webp";
-import Car3 from "@/assets/images/discover-cars-3.webp";
+import Car1 from "@/assets/images/car-gla200.webp";
+import Car2 from "@/assets/images/car-velfire.webp";
+import Car3 from "@/assets/images/car-glc300.webp";
 
 type Provide = {
   title: string;

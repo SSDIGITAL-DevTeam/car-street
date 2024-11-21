@@ -7,6 +7,7 @@ import { FiMapPin } from "react-icons/fi";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { PhoneInput } from "react-international-phone";
+import { FaCheckCircle } from "react-icons/fa";
 import "react-international-phone/style.css";
 import { toast } from "sonner";
 
@@ -29,6 +30,7 @@ export default function Contact() {
       toast("Form submitted", {
         position: "top-center",
         className: "bg-primary text-white font-bold",
+        icon: <FaCheckCircle className="text-white w-5 h-5" />,
       });
       // toast.success("Form submitted", {
       //   position: "top-center",

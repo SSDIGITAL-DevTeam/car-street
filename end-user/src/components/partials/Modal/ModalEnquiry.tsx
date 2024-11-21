@@ -14,6 +14,7 @@ import "react-international-phone/style.css";
 
 // import "react-toastify/dist/ReactToastify.css";
 import { toast } from "sonner";
+import { FaCheckCircle } from "react-icons/fa";
 type Props = {
   enquiryCar: string;
   isOpen: boolean;
@@ -40,9 +41,10 @@ export default function ModalEnquiry({ enquiryCar, isOpen, setIsOpen }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      toast("Form submitted", {
+      toast("Enquiry submitted", {
         position: "top-center",
         className: "bg-primary text-white font-bold",
+        icon: <FaCheckCircle className="text-white w-5 h-5" />,
       });
       // toast.success("Form submitted", {
       //   position: "top-center",

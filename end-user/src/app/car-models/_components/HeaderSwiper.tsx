@@ -29,9 +29,9 @@ export default function HeaderSwiper() {
       if (instanceRef.current) {
         instanceRef.current.next();
       }
-    }, 3000); // Change slide every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [instanceRef]);
 
   return (

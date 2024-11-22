@@ -19,10 +19,6 @@ export const filterTabs: FilterTab[] = [
 
 export const categories: FilterTab[] = [
   {
-    title: 'Minivan',
-    key: 'Minivan',
-  },
-  {
     title: 'MPV',
     key: 'MPV',
   },
@@ -31,8 +27,8 @@ export const categories: FilterTab[] = [
     key: 'SUV',
   },
   {
-    title: 'Subcompact',
-    key: 'Subcompact',
+    title: 'Compact',
+    key: 'Compact',
   },
   {
     title: 'Hybrid',

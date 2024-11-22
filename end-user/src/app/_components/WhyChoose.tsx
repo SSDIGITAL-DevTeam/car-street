@@ -34,8 +34,7 @@ export default function WhyChoose() {
             <div className="md:w-1/2 space-y-3">
               <h3 className="font-bold">Expert Guidance</h3>
               <p className="text-gray-400 max-w-md text-justify lg:text-lg">
-                Our team provides expert advice on selecting the right car. Whether it&apos;s performance, luxury, or for practicality. Our team provides expert advice on selecting the right car. Whether it&apos;s performance, luxury, or
-                practicality you&apos;re after, we’ll guide you through every step with professionalism and care.ity you&apos;re after, we’ll guide you through every step with professionalism and care.
+                Whether it&apos;s performance, luxury, or for practicality you&apos;re after, our team provides expert advice on selecting the right car and we&apos;ll guide you through every step with professionalism and care.
               </p>
             </div>
           </div>

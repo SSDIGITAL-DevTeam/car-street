@@ -1,12 +1,12 @@
-import React from "react";
-import { Button, Image } from "@nextui-org/react";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import Link from "next/link";
-import hero from "@/assets/images/hero-homepage.webp";
+import React from 'react';
+import { Button, Image } from '@nextui-org/react';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import Link from 'next/link';
+import hero from '@/assets/images/hero-homepage.webp';
 
 export default function HeaderHero() {
   return (
-    <div className="relative py-8 md:py-16 lg:py-24">
+    <div className="relative py-8 md:py-16 lg:py-24 overflow-hidden">
       <div className="container p-4 md:p-8">
         <div className="border-b-5 lg:border-b-8 border-primary max-w-24 lg:max-w-56"></div>
 
@@ -16,20 +16,11 @@ export default function HeaderHero() {
           </h1>
 
           <p className="max-w-lg lg:text-xl md:text-lg text-gray-400 leading-snug capitalize tracking-wide">
-            CarStreet - your trusted new car dealership in singapore! come by
-            For a cup of coffee on us, while our friendly advisors help you
-            through your car-buying journey.{" "}
+            CarStreet - your trusted new car dealership in singapore! come by For a cup of coffee on us, while our friendly advisors help you through your car-buying journey.{' '}
           </p>
 
           <div className="pt-6">
-            <Button
-              as={Link}
-              href="/contact-us"
-              radius="full"
-              color="primary"
-              size="lg"
-              endContent={<FaLongArrowAltRight className="text-white" />}
-            >
+            <Button as={Link} href="/contact-us" radius="full" color="primary" size="lg" endContent={<FaLongArrowAltRight className="text-white" />}>
               BOOK A TEST DRIVE
             </Button>
           </div>
@@ -47,12 +38,8 @@ export default function HeaderHero() {
         </div> */}
       </div>
 
-      <div className="absolute top-0 lg:-top-40 md:-right-28 lg:right-0 overflow-hidden -z-10 hidden md:block">
-        <Image
-          src={hero.src}
-          alt="Car street"
-          className="md:w-1/2 lg:w-full md:ml-auto"
-        />
+      <div className="absolute top-0 lg:-top-40 md:-right-32 lg:right-0 overflow-hidden -z-10 hidden md:block">
+        <Image src={hero.src} alt="Car street" className="md:w-1/2 md:ml-auto" />
       </div>
     </div>
   );

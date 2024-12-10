@@ -2,9 +2,9 @@ import { Brand, Car, Category } from "@/@types/Car";
 import landy from "@/assets/images/car-landy.webp";
 import fit from "@/assets/images/car-fit.webp";
 import freed from "@/assets/images/car-freed.webp";
-import glc300 from "@/assets/images/car-glc300.webp";
+// import glc300 from "@/assets/images/car-glc300.webp";
 import alphard from "@/assets/images/car-alphard.png";
-import gla200 from "@/assets/images/car-gla200.webp";
+// import gla200 from "@/assets/images/car-gla200.webp";
 import noah from "@/assets/images/car-noah.webp";
 import prius from "@/assets/images/car-prius.webp";
 import stepwagon from "@/assets/images/car-stepwagon.webp";
@@ -64,18 +64,18 @@ import vezelExt3 from "@/assets/images/vezel-ext-3.webp";
 import vezelInt1 from "@/assets/images/vezel-int-1.webp";
 import vezelInt2 from "@/assets/images/vezel-int-2.webp";
 import vezelInt3 from "@/assets/images/vezel-int-3.webp";
-import gla300Ext1 from "@/assets/images/gla300-ext-1.webp";
-import gla300Ext2 from "@/assets/images/gla300-ext-2.webp";
-import gla300Ext3 from "@/assets/images/gla300-ext-3.webp";
-import gla300Int1 from "@/assets/images/gla300-int-1.webp";
-import gla300Int2 from "@/assets/images/gla300-int-2.webp";
-import gla300Int3 from "@/assets/images/gla300-int-3.webp";
-import gla200Ext1 from "@/assets/images/gla200-ext-1.webp";
-import gla200Ext2 from "@/assets/images/gla200-ext-2.webp";
-import gla200Ext3 from "@/assets/images/gla200-ext-3.webp";
-import gla200Int1 from "@/assets/images/gla200-int-1.webp";
-import gla200Int2 from "@/assets/images/gla200-int-2.webp";
-import gla200Int3 from "@/assets/images/gla200-int-3.webp";
+// import gla300Ext1 from "@/assets/images/gla300-ext-1.webp";
+// import gla300Ext2 from "@/assets/images/gla300-ext-2.webp";
+// import gla300Ext3 from "@/assets/images/gla300-ext-3.webp";
+// import gla300Int1 from "@/assets/images/gla300-int-1.webp";
+// import gla300Int2 from "@/assets/images/gla300-int-2.webp";
+// import gla300Int3 from "@/assets/images/gla300-int-3.webp";
+// import gla200Ext1 from "@/assets/images/gla200-ext-1.webp";
+// import gla200Ext2 from "@/assets/images/gla200-ext-2.webp";
+// import gla200Ext3 from "@/assets/images/gla200-ext-3.webp";
+// import gla200Int1 from "@/assets/images/gla200-int-1.webp";
+// import gla200Int2 from "@/assets/images/gla200-int-2.webp";
+// import gla200Int3 from "@/assets/images/gla200-int-3.webp";
 
 export const allCars: Car[] = [
   {
@@ -786,174 +786,174 @@ export const allCars: Car[] = [
     },
   },
 
-  {
-    slug: "mercedes-benz-gla200",
-    name: "Mercedes-Benz GLA200",
-    description:
-      "The Mercedes-Benz GLA200 (2023) is a sleek and versatile luxury SUV with a 1.3L turbocharged engine and 7G-DCT automatic transmission for both power and efficiency. It features a premium interior with leather seats, dual-zone climate control, and a 10.25-inch MBUX infotainment system. With advanced safety features like Active Brake Assist and Blind Spot Assist, the GLA200 offers a secure and stylish driving experience.",
-    engine_type: "1.3L 4-cylinder Turbocharged Engine",
-    transmission: "7G-DCT Automatic Transmission",
-    fuel_efficiency: "6.0L/100km (approx. 16.7 km/l)",
-    drive_type: "Front-Wheel Drive (FWD)",
-    acceleration: "0-100 km/h in 8.7 seconds",
-    top_speed: 210,
-    seats: 5,
-    mpg: "39.2",
-    warranty: "3 years or 100,000 km (whichever comes first)",
-    category: "SUV",
-    engine: 1332,
-    power: 161,
-    torque: 250,
-    cover: gla200.src,
-    brand: "Mercedes-Benz",
-    interior: {
-      description:
-        "The Mercedes-Benz GLA200 (2023) offers a luxurious interior with premium leather upholstery and adjustable lumbar support for maximum comfort. It features a 10.25-inch touchscreen infotainment system with MBUX, Apple CarPlay, and Android Auto integration, making it easy to stay connected. The dual-zone automatic climate control ensures personalized comfort, while the panoramic sliding sunroof provides a sense of openness. With 435 liters of cargo space, expandable by folding the rear seats, the GLA200 is both stylish and practical.",
-      covers: [
-        {
-          url: gla200Int1.src,
-        },
-        {
-          url: gla200Int2.src,
-        },
-        {
-          url: gla200Int3.src,
-        },
-      ],
-    },
+  // {
+  //   slug: "mercedes-benz-gla200",
+  //   name: "Mercedes-Benz GLA200",
+  //   description:
+  //     "The Mercedes-Benz GLA200 (2023) is a sleek and versatile luxury SUV with a 1.3L turbocharged engine and 7G-DCT automatic transmission for both power and efficiency. It features a premium interior with leather seats, dual-zone climate control, and a 10.25-inch MBUX infotainment system. With advanced safety features like Active Brake Assist and Blind Spot Assist, the GLA200 offers a secure and stylish driving experience.",
+  //   engine_type: "1.3L 4-cylinder Turbocharged Engine",
+  //   transmission: "7G-DCT Automatic Transmission",
+  //   fuel_efficiency: "6.0L/100km (approx. 16.7 km/l)",
+  //   drive_type: "Front-Wheel Drive (FWD)",
+  //   acceleration: "0-100 km/h in 8.7 seconds",
+  //   top_speed: 210,
+  //   seats: 5,
+  //   mpg: "39.2",
+  //   warranty: "3 years or 100,000 km (whichever comes first)",
+  //   category: "SUV",
+  //   engine: 1332,
+  //   power: 161,
+  //   torque: 250,
+  //   cover: gla200.src,
+  //   brand: "Mercedes-Benz",
+  //   interior: {
+  //     description:
+  //       "The Mercedes-Benz GLA200 (2023) offers a luxurious interior with premium leather upholstery and adjustable lumbar support for maximum comfort. It features a 10.25-inch touchscreen infotainment system with MBUX, Apple CarPlay, and Android Auto integration, making it easy to stay connected. The dual-zone automatic climate control ensures personalized comfort, while the panoramic sliding sunroof provides a sense of openness. With 435 liters of cargo space, expandable by folding the rear seats, the GLA200 is both stylish and practical.",
+  //     covers: [
+  //       {
+  //         url: gla200Int1.src,
+  //       },
+  //       {
+  //         url: gla200Int2.src,
+  //       },
+  //       {
+  //         url: gla200Int3.src,
+  //       },
+  //     ],
+  //   },
 
-    exterior: {
-      description:
-        "On the exterior, a striking design with an aggressive front grille and sleek lines that emphasize its sporty character. It rides on 18-inch alloy wheels and is equipped with LED High Performance headlamps and LED tail lights, ensuring visibility and safety while adding to the vehicle’s modern appeal.",
-      covers: [
-        {
-          url: gla200Ext1.src,
-        },
-        {
-          url: gla200Ext2.src,
-        },
-        {
-          url: gla200Ext3.src,
-        },
-      ],
-    },
-    safety_features: {
-      features: [
-        {
-          name: "Airbags",
-          description: "Front, side, and curtain airbags",
-        },
-        {
-          name: "Assistance Systems",
-          description:
-            "Assistance Systems: Active Brake Assist, Blind Spot Assist, Lane Keeping Assist",
-        },
-        {
-          name: "Parking",
-          description: "Rear-view camera with Park Assist",
-        },
-      ],
-    },
+  //   exterior: {
+  //     description:
+  //       "On the exterior, a striking design with an aggressive front grille and sleek lines that emphasize its sporty character. It rides on 18-inch alloy wheels and is equipped with LED High Performance headlamps and LED tail lights, ensuring visibility and safety while adding to the vehicle’s modern appeal.",
+  //     covers: [
+  //       {
+  //         url: gla200Ext1.src,
+  //       },
+  //       {
+  //         url: gla200Ext2.src,
+  //       },
+  //       {
+  //         url: gla200Ext3.src,
+  //       },
+  //     ],
+  //   },
+  //   safety_features: {
+  //     features: [
+  //       {
+  //         name: "Airbags",
+  //         description: "Front, side, and curtain airbags",
+  //       },
+  //       {
+  //         name: "Assistance Systems",
+  //         description:
+  //           "Assistance Systems: Active Brake Assist, Blind Spot Assist, Lane Keeping Assist",
+  //       },
+  //       {
+  //         name: "Parking",
+  //         description: "Rear-view camera with Park Assist",
+  //       },
+  //     ],
+  //   },
 
-    technologies: {
-      features: [
-        {
-          name: "Connectivity",
-          description: "Bluetooth, USB-C ports, wireless charging",
-        },
-        {
-          name: "Advanced Driver Assistance",
-          description:
-            "Cruise control, Active Distance Assist DISTRONIC, Traffic Sign Assist",
-        },
-      ],
-    },
-  },
+  //   technologies: {
+  //     features: [
+  //       {
+  //         name: "Connectivity",
+  //         description: "Bluetooth, USB-C ports, wireless charging",
+  //       },
+  //       {
+  //         name: "Advanced Driver Assistance",
+  //         description:
+  //           "Cruise control, Active Distance Assist DISTRONIC, Traffic Sign Assist",
+  //       },
+  //     ],
+  //   },
+  // },
 
-  {
-    slug: "mercedes-benz-glc300",
-    name: "Mercedes-Benz GLC300",
-    description:
-      "The Mercedes-Benz GLC 300 is a premium SUV with a 2.0L turbocharged engine, known for its powerful performance and luxurious features. It combines a stylish exterior with advanced technology for a superior driving experience.",
-    engine_type: "2.0L 4-cylinder Turbocharged Engine",
-    transmission: "9-speed Automatic Transmission",
-    fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
-    drive_type: "All-Wheel Drive (AWD)",
-    acceleration: "0-100 km/h in 6.2 sec",
-    top_speed: 240,
-    seats: 5,
-    mpg: "31.3",
-    warranty: "3 years or 100,000 km",
-    category: "SUV",
-    engine: 1991,
-    power: 254,
-    torque: 370,
-    cover: glc300.src,
-    brand: "Mercedes-Benz",
-    interior: {
-      description:
-        "Inside, the GLC 300 offers premium leather upholstery, a 10.25-inch MBUX touchscreen, and dual-zone automatic climate control. It includes a panoramic sunroof and spacious cargo area, providing both luxury and practicality.",
-      covers: [
-        {
-          url: gla300Int1.src,
-        },
-        {
-          url: gla300Int2.src,
-        },
-        {
-          url: gla300Int3.src,
-        },
-      ],
-    },
+  // {
+  //   slug: "mercedes-benz-glc300",
+  //   name: "Mercedes-Benz GLC300",
+  //   description:
+  //     "The Mercedes-Benz GLC 300 is a premium SUV with a 2.0L turbocharged engine, known for its powerful performance and luxurious features. It combines a stylish exterior with advanced technology for a superior driving experience.",
+  //   engine_type: "2.0L 4-cylinder Turbocharged Engine",
+  //   transmission: "9-speed Automatic Transmission",
+  //   fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
+  //   drive_type: "All-Wheel Drive (AWD)",
+  //   acceleration: "0-100 km/h in 6.2 sec",
+  //   top_speed: 240,
+  //   seats: 5,
+  //   mpg: "31.3",
+  //   warranty: "3 years or 100,000 km",
+  //   category: "SUV",
+  //   engine: 1991,
+  //   power: 254,
+  //   torque: 370,
+  //   cover: glc300.src,
+  //   brand: "Mercedes-Benz",
+  //   interior: {
+  //     description:
+  //       "Inside, the GLC 300 offers premium leather upholstery, a 10.25-inch MBUX touchscreen, and dual-zone automatic climate control. It includes a panoramic sunroof and spacious cargo area, providing both luxury and practicality.",
+  //     covers: [
+  //       {
+  //         url: gla300Int1.src,
+  //       },
+  //       {
+  //         url: gla300Int2.src,
+  //       },
+  //       {
+  //         url: gla300Int3.src,
+  //       },
+  //     ],
+  //   },
 
-    exterior: {
-      description:
-        "The GLC 300 features a bold exterior with a chrome-accented grille, LED High-Performance headlamps, and 19-inch alloy wheels. Its sleek lines and sophisticated design make it stand out as a luxury SUV.",
-      covers: [
-        {
-          url: gla300Ext1.src,
-        },
-        {
-          url: gla300Ext2.src,
-        },
-        {
-          url: gla300Ext3.src,
-        },
-      ],
-    },
+  //   exterior: {
+  //     description:
+  //       "The GLC 300 features a bold exterior with a chrome-accented grille, LED High-Performance headlamps, and 19-inch alloy wheels. Its sleek lines and sophisticated design make it stand out as a luxury SUV.",
+  //     covers: [
+  //       {
+  //         url: gla300Ext1.src,
+  //       },
+  //       {
+  //         url: gla300Ext2.src,
+  //       },
+  //       {
+  //         url: gla300Ext3.src,
+  //       },
+  //     ],
+  //   },
 
-    safety_features: {
-      features: [
-        {
-          name: "Airbags",
-          description: "Front, side, and curtain airbags",
-        },
-        {
-          name: "Assistance Systems",
-          description:
-            "Active Brake Assist, Blind Spot Assist, Lane Keeping Assist",
-        },
-        {
-          name: "Parking",
-          description: "360-degree camera with Park Assist",
-        },
-      ],
-    },
+  //   safety_features: {
+  //     features: [
+  //       {
+  //         name: "Airbags",
+  //         description: "Front, side, and curtain airbags",
+  //       },
+  //       {
+  //         name: "Assistance Systems",
+  //         description:
+  //           "Active Brake Assist, Blind Spot Assist, Lane Keeping Assist",
+  //       },
+  //       {
+  //         name: "Parking",
+  //         description: "360-degree camera with Park Assist",
+  //       },
+  //     ],
+  //   },
 
-    technologies: {
-      features: [
-        {
-          name: "Connectivity",
-          description: "Bluetooth, USB-C ports, wireless charging",
-        },
-        {
-          name: "Advanced Driver Assistance",
-          description:
-            "Adaptive Cruise Control, Active Distance Assist DISTRONIC, Traffic Sign Assist",
-        },
-      ],
-    },
-  },
+  //   technologies: {
+  //     features: [
+  //       {
+  //         name: "Connectivity",
+  //         description: "Bluetooth, USB-C ports, wireless charging",
+  //       },
+  //       {
+  //         name: "Advanced Driver Assistance",
+  //         description:
+  //           "Adaptive Cruise Control, Active Distance Assist DISTRONIC, Traffic Sign Assist",
+  //       },
+  //     ],
+  //   },
+  // },
 ];
 
 export const allCategories: Category[] = [
@@ -1165,45 +1165,45 @@ export const allCategories: Category[] = [
         brand: "Honda",
       },
 
-      {
-        slug: "mercedes-benz-gla200",
-        name: "Mercedes-Benz GLA200",
-        engine_type: " ",
-        transmission: " ",
-        fuel_efficiency: " ",
-        drive_type: " ",
-        acceleration: " ",
-        top_speed: 0,
-        seats: 0,
-        mpg: "",
-        warranty: "",
-        category: "SUV",
-        engine: 1332,
-        power: 161,
-        torque: 250,
-        cover: gla200.src,
-        brand: "Honda",
-      },
+      // {
+      //   slug: "mercedes-benz-gla200",
+      //   name: "Mercedes-Benz GLA200",
+      //   engine_type: " ",
+      //   transmission: " ",
+      //   fuel_efficiency: " ",
+      //   drive_type: " ",
+      //   acceleration: " ",
+      //   top_speed: 0,
+      //   seats: 0,
+      //   mpg: "",
+      //   warranty: "",
+      //   category: "SUV",
+      //   engine: 1332,
+      //   power: 161,
+      //   torque: 250,
+      //   cover: gla200.src,
+      //   brand: "Honda",
+      // },
 
-      {
-        slug: "mercedes-benz-glc300",
-        name: "Mercedes-Benz GLC300",
-        engine_type: "2.0L 4-cylinder Turbocharged Engine",
-        transmission: "9-speed Automatic Transmission",
-        fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
-        drive_type: "All-Wheel Drive (AWD)",
-        acceleration: "0-100 km/h in 6.2 sec",
-        top_speed: 240,
-        seats: 5,
-        mpg: "31.3",
-        warranty: "3 years or 100,000 km",
-        category: "SUV",
-        engine: 1991,
-        power: 254,
-        torque: 370,
-        cover: glc300.src,
-        brand: "Mercedes-Benz",
-      },
+      // {
+      //   slug: "mercedes-benz-glc300",
+      //   name: "Mercedes-Benz GLC300",
+      //   engine_type: "2.0L 4-cylinder Turbocharged Engine",
+      //   transmission: "9-speed Automatic Transmission",
+      //   fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
+      //   drive_type: "All-Wheel Drive (AWD)",
+      //   acceleration: "0-100 km/h in 6.2 sec",
+      //   top_speed: 240,
+      //   seats: 5,
+      //   mpg: "31.3",
+      //   warranty: "3 years or 100,000 km",
+      //   category: "SUV",
+      //   engine: 1991,
+      //   power: 254,
+      //   torque: 370,
+      //   cover: glc300.src,
+      //   brand: "Mercedes-Benz",
+      // },
     ],
   },
 
@@ -1430,51 +1430,51 @@ export const allBrands: Brand[] = [
     ],
   },
 
-  {
-    id: "3",
-    name: "Mercedes-Benz",
-    cars: [
-      {
-        slug: "mercedes-benz-gla200",
-        name: "Mercedes-Benz GLA200",
-        engine_type: " ",
-        transmission: " ",
-        fuel_efficiency: " ",
-        drive_type: " ",
-        acceleration: " ",
-        top_speed: 0,
-        seats: 0,
-        mpg: "",
-        warranty: "",
-        category: "SUV",
-        engine: 1332,
-        power: 161,
-        torque: 250,
-        cover: gla200.src,
-        brand: "Mercedes-Benz",
-      },
+  // {
+  //   id: "3",
+  //   name: "Mercedes-Benz",
+  //   cars: [
+  //     {
+  //       slug: "mercedes-benz-gla200",
+  //       name: "Mercedes-Benz GLA200",
+  //       engine_type: " ",
+  //       transmission: " ",
+  //       fuel_efficiency: " ",
+  //       drive_type: " ",
+  //       acceleration: " ",
+  //       top_speed: 0,
+  //       seats: 0,
+  //       mpg: "",
+  //       warranty: "",
+  //       category: "SUV",
+  //       engine: 1332,
+  //       power: 161,
+  //       torque: 250,
+  //       cover: gla200.src,
+  //       brand: "Mercedes-Benz",
+  //     },
 
-      {
-        slug: "mercedes-benz-glc300",
-        name: "Mercedes-Benz GLC300",
-        engine_type: "2.0L 4-cylinder Turbocharged Engine",
-        transmission: "9-speed Automatic Transmission",
-        fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
-        drive_type: "All-Wheel Drive (AWD)",
-        acceleration: "0-100 km/h in 6.2 sec",
-        top_speed: 240,
-        seats: 5,
-        mpg: "31.3",
-        warranty: "3 years or 100,000 km",
-        category: "SUV",
-        engine: 1991,
-        power: 254,
-        torque: 370,
-        cover: glc300.src,
-        brand: "Mercedes-Benz",
-      },
-    ],
-  },
+  //     {
+  //       slug: "mercedes-benz-glc300",
+  //       name: "Mercedes-Benz GLC300",
+  //       engine_type: "2.0L 4-cylinder Turbocharged Engine",
+  //       transmission: "9-speed Automatic Transmission",
+  //       fuel_efficiency: "7.5L/100km (approx. 13.3 km/l)",
+  //       drive_type: "All-Wheel Drive (AWD)",
+  //       acceleration: "0-100 km/h in 6.2 sec",
+  //       top_speed: 240,
+  //       seats: 5,
+  //       mpg: "31.3",
+  //       warranty: "3 years or 100,000 km",
+  //       category: "SUV",
+  //       engine: 1991,
+  //       power: 254,
+  //       torque: 370,
+  //       cover: glc300.src,
+  //       brand: "Mercedes-Benz",
+  //     },
+  //   ],
+  // },
 
   {
     id: "4",

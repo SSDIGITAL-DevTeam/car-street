@@ -50,7 +50,7 @@ export default function Cta() {
             size="lg"
             endContent={<FaLongArrowAltRight className="text-white" />}
           >
-            BOOK A TEST DRIVE
+            GET TRADE-IN VALUE
           </Button>
         </div>
       </div>

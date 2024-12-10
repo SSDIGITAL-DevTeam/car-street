@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button, Image } from '@nextui-org/react';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import Link from 'next/link';
-import hero from '@/assets/images/hero-homepage.webp';
+import React from "react";
+import { Button, Image } from "@nextui-org/react";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import Link from "next/link";
+import hero from "@/assets/images/hero-homepage.webp";
 
 export default function HeaderHero() {
   return (
@@ -15,13 +15,23 @@ export default function HeaderHero() {
             BRING HOME <br /> YOUR DREAM CAR
           </h1>
 
-          <p className="max-w-lg lg:text-xl md:text-lg text-gray-400 leading-snug capitalize tracking-wide">
-            CarStreet - your trusted new car dealership in singapore! come by For a cup of coffee on us, while our friendly advisors help you through your car-buying journey.{' '}
+          <p className="max-w-lg lg:text-xl md:text-lg text-gray-400 leading-snug tracking-wide">
+            CarStreet is trusted for its professional and reliable sales staff,
+            dedicated to making your car-buying journey smooth and hassle-free.
+            With expert guidance and exceptional service, CarStreet ensures you
+            drive away with confidence!
           </p>
 
           <div className="pt-6">
-            <Button as={Link} href="/contact-us" radius="full" color="primary" size="lg" endContent={<FaLongArrowAltRight className="text-white" />}>
-              BOOK A TEST DRIVE
+            <Button
+              as={Link}
+              href="/contact-us"
+              radius="full"
+              color="primary"
+              size="lg"
+              endContent={<FaLongArrowAltRight className="text-white" />}
+            >
+              GET TRADE-IN VALUE
             </Button>
           </div>
         </div>
@@ -39,7 +49,11 @@ export default function HeaderHero() {
       </div>
 
       <div className="absolute top-0 lg:-top-40 md:-right-32 lg:right-0 overflow-hidden -z-10 hidden md:block">
-        <Image src={hero.src} alt="Car street" className="md:w-1/2 md:ml-auto" />
+        <Image
+          src={hero.src}
+          alt="Car street"
+          className="md:w-1/2 md:ml-auto"
+        />
       </div>
     </div>
   );

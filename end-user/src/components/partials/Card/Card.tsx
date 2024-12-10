@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Image, Button, Chip } from '@nextui-org/react';
-import { Car } from '@/@types/Car';
-import { BsCarFrontFill } from 'react-icons/bs';
-import ModalEnquiry from '../Modal';
+import React, { useState } from "react";
+import Link from "next/link";
+import { Image, Button, Chip } from "@nextui-org/react";
+import { Car } from "@/@types/Car";
+import { BsCarFrontFill } from "react-icons/bs";
+import ModalEnquiry from "../Modal";
 
 type Props = {
   car: Car;
 };
 
 export default function ProductCard({ car }: Props) {
-  const [enquiryCar, setEnquiryCar] = useState<string>('');
+  const [enquiryCar, setEnquiryCar] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="border bg-[#F6F6F6] rounded-xl p-4 h-full">
       <div className="mb-4 relative flex justify-center lg:h-40">
-        <Image src={car?.cover} alt={car?.name} />
+        <Image src={car?.cover} alt={car?.name} className="object-cover" />
 
         <div className="absolute right-0 top-0 z-10">
-          <Chip startContent={<BsCarFrontFill className="text-white w-5 h-5" />} className="bg-black/70 text-white px-2">
+          <Chip
+            startContent={<BsCarFrontFill className="text-white w-5 h-5" />}
+            className="bg-black/70 text-white px-2"
+          >
             {car.category}
           </Chip>
         </div>
@@ -45,7 +48,13 @@ export default function ProductCard({ car }: Props) {
       </div>
 
       <div className="flex justify-between gap-2 md:gap-4 mt-auto">
-        <Button variant="bordered" color="primary" radius="full" as={Link} href={`/car-models/${car.slug}`}>
+        <Button
+          variant="bordered"
+          color="primary"
+          radius="full"
+          as={Link}
+          href={`/car-models/${car.slug}`}
+        >
           See Details
         </Button>
 
@@ -62,7 +71,11 @@ export default function ProductCard({ car }: Props) {
         </Button>
       </div>
 
-      <ModalEnquiry enquiryCar={enquiryCar} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ModalEnquiry
+        enquiryCar={enquiryCar}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
     </div>
   );
 }

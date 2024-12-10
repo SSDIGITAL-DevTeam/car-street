@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import { Image, Button } from "@nextui-org/react";
-import car from "@/assets/images/half-car-bottom-2.webp";
+// import car from "@/assets/images/half-car-bottom-2.webp";
+import car from "@/assets/images/alphard-half.png";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -11,7 +13,7 @@ export default function Cta() {
     <div className="py-16 md:pt-24 md:mb-40 lg:mb-60 relative overflow-x-hidden">
       <div className="container p-4 md:p-8">
         <div className="absolute left-0 top-20 w-1/2 lg:w-full items-center hidden md:flex">
-          <Image src={car.src} alt="Car" className="w-full" />
+          <Image src={car.src} alt="Car" className=" " />
         </div>
 
         <div className="flex items-center gap-8">

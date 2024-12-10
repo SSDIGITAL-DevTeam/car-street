@@ -1,8 +1,8 @@
-import React from 'react';
-import { Image } from '@nextui-org/react';
-import image1 from '@/assets/images/why-choose-1.webp';
-import image2 from '@/assets/images/why-choose-2.webp';
-import image3 from '@/assets/images/why-choose-3.webp';
+import React from "react";
+import { Image } from "@nextui-org/react";
+import image1 from "@/assets/images/why-choose-1.webp";
+import image2 from "@/assets/images/why-choose-2.webp";
+import image3 from "@/assets/images/why-choose-3.webp";
 
 export default function WhyChoose() {
   return (
@@ -17,12 +17,20 @@ export default function WhyChoose() {
             <div className="md:w-1/2 space-y-3">
               <h3 className="font-bold">Personalized Service</h3>
               <p className="text-gray-400 max-w-md text-justify lg:text-lg">
-                At Carstreet, we believe in offering a personalised car-buying experience. Our professional team listens to your needs and helps you find the perfect vehicle that fits your lifestyle and preferences.
+                At Carstreet, we believe in offering a personalised car-buying
+                experience. Our professional team listens to your needs and
+                helps you find the perfect vehicle that fits your lifestyle and
+                preferences.
               </p>
             </div>
 
             <div className="md:w-1/2">
-              <Image src={image1.src} alt="Personalized Service" radius="none" className="w-full object-cover" />
+              <Image
+                src={image1.src}
+                alt="Personalized Service"
+                radius="none"
+                className="w-full object-cover"
+              />
             </div>
           </div>
 
@@ -34,7 +42,10 @@ export default function WhyChoose() {
             <div className="md:w-1/2 space-y-3">
               <h3 className="font-bold">Expert Guidance</h3>
               <p className="text-gray-400 max-w-md text-justify lg:text-lg">
-                Whether it&apos;s performance, luxury, or for practicality you&apos;re after, our team provides expert advice on selecting the right car and we&apos;ll guide you through every step with professionalism and care.
+                Whether it&apos;s performance, luxury, or for practicality. Our
+                team provides expert advice on selecting the right car and
+                we&apos;ll guide you through every step with professionalism and
+                care.
               </p>
             </div>
           </div>
@@ -43,13 +54,19 @@ export default function WhyChoose() {
             <div className="md:w-1/2 space-y-3">
               <h3 className="font-bold">Customer Satisfaction Service</h3>
               <p className="text-gray-400 max-w-md text-justify lg:text-lg">
-                Your satisfaction is our priority. From your first visit to driving off in your new car, we ensure a hassle-free, enjoyable experience. Our friendly staffs are here to make sure you find the vehicle that matches your
-                expectations.
+                Your satisfaction is our priority. From your first visit to
+                driving off in your new car, we ensure a hassle-free, enjoyable
+                experience. Our friendly staffs are here to make sure you find
+                the vehicle that matches your expectations.
               </p>
             </div>
 
             <div className="md:w-1/2">
-              <Image src={image3.src} alt="Customer Satisfaction Service" radius="none" />
+              <Image
+                src={image3.src}
+                alt="Customer Satisfaction Service"
+                radius="none"
+              />
             </div>
           </div>
         </div>

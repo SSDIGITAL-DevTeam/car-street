@@ -455,7 +455,7 @@ export default function DetailCar(): JSX.Element {
               startContent={<FaMapMarkerAlt className="text-white" />}
               className="w-max"
             >
-              GET DIRECTION
+              GET DIRECTIONS
             </Button>
           </div>
         </div>

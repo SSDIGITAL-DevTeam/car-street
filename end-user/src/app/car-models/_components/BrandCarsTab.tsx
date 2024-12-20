@@ -1,6 +1,7 @@
 import { Brand, Car } from "@/@types/Car";
 import Card from "@/components/partials/Card";
-import { allBrands } from "@/constant/Cars";
+import { allBrands } from "@/constant/BrandsCar";
+
 import React from "react";
 
 type Props = {
@@ -8,7 +9,6 @@ type Props = {
 };
 
 export default function BrandCarsTab({ params }: Props) {
-  console.log();
   return (
     <div>
       {!params ? (

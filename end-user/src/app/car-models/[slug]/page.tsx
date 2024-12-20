@@ -10,7 +10,14 @@ import { PiSeatFill } from "react-icons/pi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsDot } from "react-icons/bs";
 import Link from "next/link";
-import { SiMercedes, SiHonda, SiToyota, SiSuzuki } from "react-icons/si";
+import {
+  SiMercedes,
+  SiHonda,
+  SiToyota,
+  SiSuzuki,
+  SiAudi,
+  SiLandrover,
+} from "react-icons/si";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -81,6 +88,12 @@ export default function DetailCar(): JSX.Element {
       case type == "Mercedes-Benz":
         return <SiMercedes className="w-8 h-8" />;
 
+      case type == "Audi":
+        return <SiAudi className="w-8 h-8" />;
+
+      case type == "Land Rover":
+        return <SiLandrover className="w-8 h-8" />;
+
       default:
         return;
     }
@@ -120,7 +133,7 @@ export default function DetailCar(): JSX.Element {
 
             <div>
               <Image
-                src={car?.exterior?.covers[0].url}
+                src={car?.exterior?.covers[car.exterior.covers.length - 1].url}
                 alt={car?.name}
                 removeWrapper
                 className="w-full object-cover"
@@ -137,7 +150,7 @@ export default function DetailCar(): JSX.Element {
           <div className="grid lg:grid-cols-2 items-center gap-4 md:gap-8">
             <div>
               <Image
-                src={car?.exterior?.covers[1].url}
+                src={car?.exterior?.covers[car.exterior.covers.length - 2]?.url}
                 alt={car?.name}
                 removeWrapper
                 className="object-cover w-full"
@@ -336,15 +349,17 @@ export default function DetailCar(): JSX.Element {
 
             <div className="navigation-wrapper">
               <div ref={exteriorSliderRef} className="keen-slider">
-                {car?.exterior?.covers.map((cover, index: number) => (
-                  <div key={index} className="keen-slider__slide">
-                    <Image
-                      src={cover.url}
-                      removeWrapper
-                      alt={car.name + index}
-                    />
-                  </div>
-                ))}
+                {car?.exterior?.covers
+                  .slice(0, -2)
+                  .map((cover, index: number) => (
+                    <div key={index} className="keen-slider__slide">
+                      <Image
+                        src={cover.url}
+                        removeWrapper
+                        alt={car.name + index}
+                      />
+                    </div>
+                  ))}
               </div>{" "}
               {loaded && exteriorInstanceRef.current && (
                 <div className="dots absolute bottom-0  left-1/2 -translate-x-1/2 z-10">

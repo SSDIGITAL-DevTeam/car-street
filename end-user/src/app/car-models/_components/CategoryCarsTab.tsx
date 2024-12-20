@@ -1,6 +1,7 @@
 import { Car, Category } from "@/@types/Car";
 import Card from "@/components/partials/Card";
-import { allCategories } from "@/constant/Cars";
+import { allCategories } from "@/constant/CategoriesCar";
+
 import React from "react";
 
 type Props = {

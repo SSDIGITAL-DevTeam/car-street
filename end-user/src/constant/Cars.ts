@@ -126,6 +126,52 @@ import rs6Int2 from "@/assets/images/rs6-interior-2.webp";
 import rs6Int3 from "@/assets/images/rs6-interior-3.webp";
 import rs6Sec1 from "@/assets/images/rs6-section-1.webp";
 import rs6Sec2 from "@/assets/images/rs6-section-2.webp";
+
+import yarisExt1 from "@/assets/images/yaris-exterior-1.webp";
+import yarisExt2 from "@/assets/images/yaris-exterior-2.webp";
+import yarisExt3 from "@/assets/images/yaris-exterior-3.webp";
+import yarisInt1 from "@/assets/images/yaris-interior-1.webp";
+import yarisInt2 from "@/assets/images/yaris-interior-2.webp";
+import yarisInt3 from "@/assets/images/yaris-interior-3.webp";
+import yarisSec1 from "@/assets/images/yaris-section-1.webp";
+import yarisSec2 from "@/assets/images/yaris-section-2.webp";
+
+import eqeExt1 from "@/assets/images/eqe-exterior-1.webp";
+import eqeExt2 from "@/assets/images/eqe-exterior-2.webp";
+import eqeExt3 from "@/assets/images/eqe-exterior-3.webp";
+import eqeInt1 from "@/assets/images/eqe-interior-1.webp";
+import eqeInt2 from "@/assets/images/eqe-interior-2.webp";
+import eqeInt3 from "@/assets/images/eqe-interior-3.webp";
+import eqeSec1 from "@/assets/images/eqe-section-1.webp";
+import eqeSec2 from "@/assets/images/eqe-section-2.webp";
+
+import landroverExt1 from "@/assets/images/landrover-exterior-1.webp";
+import landroverExt2 from "@/assets/images/landrover-exterior-2.webp";
+import landroverExt3 from "@/assets/images/landrover-exterior-3.webp";
+import landroverInt1 from "@/assets/images/landrover-interior-1.webp";
+import landroverInt2 from "@/assets/images/landrover-interior-2.webp";
+import landroverInt3 from "@/assets/images/landrover-interior-3.webp";
+import landroverSec1 from "@/assets/images/landrover-section-1.webp";
+import landroverSec2 from "@/assets/images/landrover-section-2.webp";
+
+import a45sExt1 from "@/assets/images/a45s-exterior-1.webp";
+import a45sExt2 from "@/assets/images/a45s-exterior-2.webp";
+import a45sExt3 from "@/assets/images/a45s-exterior-3.webp";
+import a45sInt1 from "@/assets/images/a45s-interior-1.webp";
+import a45sInt2 from "@/assets/images/a45s-interior-2.webp";
+import a45sInt3 from "@/assets/images/a45s-interior-3.webp";
+import a45sSec1 from "@/assets/images/a45s-section-1.webp";
+import a45sSec2 from "@/assets/images/a45s-section-2.webp";
+
+import corollaExt1 from "@/assets/images/corolla-exterior-1.webp";
+import corollaExt2 from "@/assets/images/corolla-exterior-2.webp";
+import corollaExt3 from "@/assets/images/corolla-exterior-3.webp";
+import corollaInt1 from "@/assets/images/corolla-interior-1.webp";
+import corollaInt2 from "@/assets/images/corolla-interior-2.webp";
+import corollaInt3 from "@/assets/images/corolla-interior-3.webp";
+import corollaSec1 from "@/assets/images/corolla-section-1.webp";
+import corollaSec2 from "@/assets/images/corolla-section-2.webp";
+
 // import gla300Ext1 from "@/assets/images/gla300-ext-1.webp";
 // import gla300Ext2 from "@/assets/images/gla300-ext-2.webp";
 // import gla300Ext3 from "@/assets/images/gla300-ext-3.webp";
@@ -1055,7 +1101,13 @@ export const allCars: Car[] = [
         "The Land Rover Defender 90 2.0 300PS 5-Seater (A) delivers a premium yet functional cabin designed for both adventure and everyday comfort. Its spacious interior is equipped with durable materials, complemented by modern touches like leather upholstery and Robustec accents. A 10-inch Pivi Pro infotainment system provides seamless connectivity with Apple CarPlay and Android Auto, while the 12.3-inch digital driver display offers customizable driving data. Five full-sized seats ensure ample passenger comfort, with rear folding seats for added versatility. Practicality is enhanced by rubberized flooring, built-in storage compartments, and climate control for a refined driving experience in any environment.",
       covers: [
         {
-          url: "",
+          url: landroverInt1.src,
+        },
+        {
+          url: landroverInt2.src,
+        },
+        {
+          url: landroverInt3.src,
         },
       ],
     },
@@ -1065,7 +1117,19 @@ export const allCars: Car[] = [
         "This all-terrain SUV boasts a bold and iconic design that blends heritage with modernity. Its compact, three-door body is defined by a strong silhouette, flared wheel arches, and a purposeful stance. LED headlights with signature DRLs ensure excellent visibility and add a distinctive look, while the side-hinged rear door with a mounted spare tire enhances its rugged appeal. High ground clearance, 20-inch alloy wheels, and an aluminum underbody reinforce its off-road credentials. Finished with premium detailing and a selection of striking color options, the Defender 90 stands out as a true all-terrain icon.",
       covers: [
         {
-          url: "",
+          url: landroverExt1.src,
+        },
+        {
+          url: landroverExt2.src,
+        },
+        {
+          url: landroverExt3.src,
+        },
+        {
+          url: landroverSec1.src,
+        },
+        {
+          url: landroverSec2.src,
         },
       ],
     },
@@ -1128,7 +1192,13 @@ export const allCars: Car[] = [
         "Step into a cabin designed to exhilarate and inspire, featuring premium materials and cutting-edge technology. The AMG Performance seats, upholstered in leather with sporty contrast stitching, provide exceptional support during dynamic driving. The dual-screen setup includes a fully digital instrument cluster and a high-resolution infotainment display powered by the MBUX system, offering seamless connectivity and advanced voice control. Ambient lighting with 64 color options creates a personalized atmosphere, while the flat-bottom AMG steering wheel with touch controls ensures a direct connection to the road. With meticulous craftsmanship and driver-focused ergonomics, the interior is both luxurious and performance-oriented.",
       covers: [
         {
-          url: "",
+          url: a45sInt1.src,
+        },
+        {
+          url: a45sInt2.src,
+        },
+        {
+          url: a45sInt3.src,
         },
       ],
     },
@@ -1138,7 +1208,19 @@ export const allCars: Car[] = [
         "Aggressive and aerodynamic, the design exudes power and precision. The Panamericana grille, flanked by sharp LED headlights, dominates the front, while large air intakes hint at the performance within. A sculpted hood, flared wheel arches, and 19-inch AMG alloy wheels enhance its commanding presence. At the rear, the quad exhaust outlets, a prominent diffuser, and a sleek spoiler emphasize its racing pedigree. The bold lines and sporty proportions not only captivate the eye but also optimize airflow, making this car as functional as it is striking.",
       covers: [
         {
-          url: "",
+          url: a45sExt1.src,
+        },
+        {
+          url: a45sExt2.src,
+        },
+        {
+          url: a45sExt3.src,
+        },
+        {
+          url: a45sSec1.src,
+        },
+        {
+          url: a45sSec2.src,
         },
       ],
     },
@@ -1201,7 +1283,13 @@ export const allCars: Car[] = [
         "Modern luxury meets advanced technology in a serene cabin designed for ultimate comfort and sophistication. The futuristic dashboard is dominated by the optional MBUX Hyperscreen, seamlessly integrating multiple displays under a single glass panel for intuitive control. Premium materials such as Nappa leather upholstery and sustainably sourced trim options create a refined atmosphere. The spacious interior offers excellent legroom and a panoramic sunroof that enhances the sense of openness. Advanced ambient lighting and a high-fidelity Burmester 3D sound system elevate the experience, while cutting-edge features like intelligent climate control and Energizing Comfort programs ensure every journey is as comfortable as it is efficient.",
       covers: [
         {
-          url: "",
+          url: eqeInt1.src,
+        },
+        {
+          url: eqeInt2.src,
+        },
+        {
+          url: eqeInt3.src,
         },
       ],
     },
@@ -1211,7 +1299,19 @@ export const allCars: Car[] = [
         "Sleek and aerodynamic, the design is a perfect balance of elegance and efficiency. The dynamic silhouette features smooth, flowing lines that enhance aerodynamics while showcasing its progressive identity. Distinctive LED light strips connect the headlamps and taillights, creating a futuristic look. Flush door handles, a coupe-like roofline, and large alloy wheels add to its streamlined profile. The front fascia, with a signature black panel grille, highlights its electric heritage, while carefully designed contours and an expansive rear underscore its modern sophistication. The result is a bold yet understated presence on the road.",
       covers: [
         {
-          url: "",
+          url: eqeExt1.src,
+        },
+        {
+          url: eqeExt2.src,
+        },
+        {
+          url: eqeExt3.src,
+        },
+        {
+          url: eqeSec1.src,
+        },
+        {
+          url: eqeSec2.src,
         },
       ],
     },
@@ -1260,7 +1360,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 7.7s",
     top_speed: 210,
     seats: 5,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "SUV",
     engine: 1797,
@@ -1273,7 +1373,13 @@ export const allCars: Car[] = [
         "Designed with practicality and comfort in mind, the cabin offers a harmonious blend of functionality and style. High-quality materials and soft-touch surfaces enhance the interior, while supportive seats provide comfort for both driver and passengers. The intuitive dashboard features a 7-inch touchscreen infotainment system with Apple CarPlay and Android Auto connectivity. Ample cargo space and a 60/40 split-folding rear seat offer exceptional versatility, perfect for daily commutes or weekend getaways. Additional amenities, such as dual-zone climate control and ambient lighting, ensure a pleasant and convenient driving experience.",
       covers: [
         {
-          url: "",
+          url: corollaInt1.src,
+        },
+        {
+          url: corollaInt2.src,
+        },
+        {
+          url: corollaInt3.src,
         },
       ],
     },
@@ -1283,7 +1389,19 @@ export const allCars: Car[] = [
         "Bold and athletic, the design combines SUV toughness with modern sophistication. The high ground clearance and sculpted body lines create a commanding presence, while the sleek LED headlights and sharp grille add a touch of refinement. The side profile is accentuated by striking alloy wheels and robust wheel arches, emphasizing its crossover versatility. At the rear, LED taillights and a sporty spoiler complete the dynamic look. Its aerodynamic shape not only enhances fuel efficiency but also ensures it stands out on both urban streets and rugged trails.",
       covers: [
         {
-          url: "",
+          url: corollaExt1.src,
+        },
+        {
+          url: corollaExt2.src,
+        },
+        {
+          url: corollaExt3.src,
+        },
+        {
+          url: corollaSec1.src,
+        },
+        {
+          url: corollaSec2.src,
         },
       ],
     },
@@ -1332,7 +1450,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 8.1s",
     top_speed: 180,
     seats: 5,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "SUV",
     engine: 2487,
@@ -1422,7 +1540,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 12.5s",
     top_speed: 180,
     seats: 5,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "MPV",
     engine: 1490,
@@ -1509,7 +1627,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 9.6s",
     top_speed: 180,
     seats: 7,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "MPV",
     engine: 1797,
@@ -1599,7 +1717,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 10.7s",
     top_speed: 180,
     seats: 5,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "SUV",
     engine: 1490,
@@ -1612,7 +1730,13 @@ export const allCars: Car[] = [
         "Compact yet versatile, the cabin offers a perfect blend of modern design and practicality. High-quality materials and ergonomic seating ensure comfort for both driver and passengers, while the elevated driving position provides excellent visibility. The dashboard features a sleek touchscreen infotainment system with Apple CarPlay and Android Auto for seamless connectivity. Flexible rear seats with a 40/20/40 split-fold configuration enhance cargo versatility, making it ideal for urban adventures. Additional features such as ambient lighting, a digital driver display, and dual-zone climate control add to the convenience and sophistication.",
       covers: [
         {
-          url: "",
+          url: yarisInt1.src,
+        },
+        {
+          url: yarisInt2.src,
+        },
+        {
+          url: yarisInt3.src,
         },
       ],
     },
@@ -1622,7 +1746,19 @@ export const allCars: Car[] = [
         "Stylish and dynamic, the design reflects its sporty character with rugged SUV elements. The bold front grille is flanked by sharp LED headlights, while sculpted lines along the body emphasize its modern aesthetic. Black cladding around the wheel arches and a raised ground clearance underscore its crossover appeal. The rear features sleek LED taillights and a roof spoiler, adding a sporty touch. With its compact proportions, stylish alloy wheels, and available two-tone color options, it strikes the perfect balance between urban sophistication and outdoor readiness.",
       covers: [
         {
-          url: "",
+          url: yarisExt1.src,
+        },
+        {
+          url: yarisExt2.src,
+        },
+        {
+          url: yarisExt3.src,
+        },
+        {
+          url: yarisSec1.src,
+        },
+        {
+          url: yarisSec2.src,
         },
       ],
     },
@@ -1670,7 +1806,7 @@ export const allCars: Car[] = [
     acceleration: "0-100km/h 3.6s",
     top_speed: 280,
     seats: 0,
-    mpg: " ",
+    mpg: "",
     warranty: "",
     category: "Sports",
     engine: 3996,

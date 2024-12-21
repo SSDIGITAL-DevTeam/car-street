@@ -269,17 +269,30 @@ export default function DetailCar(): JSX.Element {
                     <div className="bg-primary p-1.5 rounded-lg">
                       <FaGasPump className="text-white w-6 h-6" />
                     </div>
-                    <span>{car?.mpg} Mpg</span>
+                    {car?.mpg ? (
+                      <span>{car?.mpg} Mpg</span>
+                    ) : (
+                      <span className="text-xl">-</span>
+                    )}
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h3 className="mb-4 font-bold">Warranty</h3>
+              {car?.warranty ? (
                 <div>
-                  <span className="text-black/40">{car?.warranty}</span>
+                  <h3 className="mb-4 font-bold">Warranty</h3>
+                  <div>
+                    <span className="text-black/40">{car?.warranty}</span>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div>
+                  <h3 className="mb-2 font-bold">Warranty</h3>
+                  <div>
+                    <span className="text-black/40 text-xl"> - </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -348,10 +361,23 @@ export default function DetailCar(): JSX.Element {
             </div>
 
             <div className="navigation-wrapper">
-              <div ref={exteriorSliderRef} className="keen-slider">
-                {car?.exterior?.covers
-                  .slice(0, -2)
-                  .map((cover, index: number) => (
+              {car?.exterior && car.exterior.covers.length > 3 ? (
+                <div ref={exteriorSliderRef} className="keen-slider">
+                  {car?.exterior?.covers
+                    .slice(0, -2)
+                    .map((cover, index: number) => (
+                      <div key={index} className="keen-slider__slide">
+                        <Image
+                          src={cover.url}
+                          removeWrapper
+                          alt={car.name + index}
+                        />
+                      </div>
+                    ))}
+                </div>
+              ) : (
+                <div ref={exteriorSliderRef} className="keen-slider">
+                  {car?.exterior?.covers.map((cover, index: number) => (
                     <div key={index} className="keen-slider__slide">
                       <Image
                         src={cover.url}
@@ -360,7 +386,9 @@ export default function DetailCar(): JSX.Element {
                       />
                     </div>
                   ))}
-              </div>{" "}
+                </div>
+              )}
+
               {loaded && exteriorInstanceRef.current && (
                 <div className="dots absolute bottom-0  left-1/2 -translate-x-1/2 z-10">
                   <div className="dots">

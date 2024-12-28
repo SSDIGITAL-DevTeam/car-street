@@ -33,7 +33,11 @@ export default function ProductCard({ car }: Props) {
       <div className="flex items-center justify-between mb-4 bg-white py-4 px-2 flex-grow">
         <div className="flex flex-col gap-2">
           <span className="text-primary text-sm">Engine</span>
-          <span className="font-bold">{car?.engine} cc</span>
+          {car.engine ? (
+            <span className="font-bold">{car?.engine} cc</span>
+          ) : (
+            <span className="font-bold text-xl text-center">-</span>
+          )}
         </div>
 
         <div className="flex flex-col gap-2">

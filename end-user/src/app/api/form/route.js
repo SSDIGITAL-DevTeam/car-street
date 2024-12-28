@@ -35,7 +35,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: "no-reply@carstreet.com.sg",
-      to: "enquiry@carstreet.com.sg", // Your email address to receive the messages
+      to: "sales@carstreet.com.sg", // Your email address to receive the messages
       subject: "Car Street Contact Form Submission",
       // bcc: "check@digital-pa.com.sg",
       html: `

@@ -190,7 +190,7 @@ export default function DetailCar(): JSX.Element {
                 <div className="flex flex-col md:flex-row gap-1 justify-between border-b pb-2">
                   <span className="text-sm md:text-base">Engine Type:</span>
                   <span className="text-sm md:text-base font-bold">
-                    {car?.engine_type}
+                    {car?.engine_type || "-"}
                   </span>
                 </div>
 
@@ -211,7 +211,7 @@ export default function DetailCar(): JSX.Element {
                 <div className="flex flex-col md:flex-row gap-1 justify-between border-b pb-2">
                   <span className="text-sm md:text-base">Fuel Efficiency:</span>
                   <span className="text-sm md:text-base font-bold">
-                    Estimated at {car?.fuel_efficiency} km/l
+                    Estimated at {car?.fuel_efficiency}
                   </span>
                 </div>
 

@@ -107,14 +107,14 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="mailto:contact@carstreet.com.sg"
+                    href="mailto:sales@carstreet.com.sg"
                     target="_blank"
                     className="flex items-start gap-2"
                   >
                     <IoMailOutline className="text-primary w-6 h-6" />
 
                     <span className="font-bold md:text-lg max-w-xs text-black/85">
-                      contact@carstreet.com.sg
+                      sales@carstreet.com.sg
                     </span>
                   </a>
                 </div>
